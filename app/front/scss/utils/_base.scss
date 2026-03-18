@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Catamaran';
+  src: url('../../../assets/font/Catamaran-Pro.ttf') format('truetype'),
+    url('../../../assets/font/Catamaran-Pro.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Doulos';
+  src: url('../../../assets/font/Doulos-SIL.ttf') format('truetype'),
+    url('../../../assets/font/Doulos-SIL.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gravity';
+  src: url('../../../assets/font/Gravity.ttf') format('truetype'),
+    url('../../../assets/font/Gravity.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Fontjek';
+  src: url('../../../assets/font/Fontjek.ttf') format('truetype'),
+    url('../../../assets/font/Fontjek.woff') format('woff');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  font-size: 62.5%;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+body {
+  background: linear-gradient(135deg, var(--c-grad-start) 20%, var(--c-grad-end) 120%);
+  color: var(--c-fg);
+  font-size: var(--f);
+  font-family: 'Gravity', sans-serif;
+  text-align: center;
+
+  .desktop {
+    display: none !important;
+  }
+}
+
+a.button {
+  background: var(--c-primary);
+  border-radius: var(--f);
+  color: var(--c-fg);
+  cursor: pointer;
+  display: inline-block;
+  font-size: var(--f-lg1);
+  font-weight: bold;
+  padding: var(--s-sl1) var(--s-lg1);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.t-center {
+  text-align: center;
+}

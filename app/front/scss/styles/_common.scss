@@ -1,0 +1,147 @@
+/* z-indexes */
+/* z-index: 1 for main */
+/* z-index: 2 for valley cut mask */
+/* z-index: 3 for nav */
+
+nav {
+  background-color: var(--c-bg);
+  height: var(--nav-height);
+  padding: var(--s);
+  position: relative;
+  text-align: initial;
+  width: 100%;
+  z-index: 3;
+
+  a.page-title {
+    color: var(--c-fg);
+    display: inline-block;
+    font-family: 'Fontjek', 'Gravity', sans-serif;
+    text-decoration: none;
+
+    img {
+      height: 100%;
+      margin-left: var(--s); /* So it feel balanced w/ hamburger */
+      max-height: calc(var(--nav-height) - (var(--s) * 2));
+    }
+  }
+
+  .nav-menu {
+    /* Menu Dropdown (Erik Terwan's codepen) MIT License https://codepen.io/erikterwan/pen/EVzeRP */
+    display: flex;
+    flex-direction: column;
+    height: var(--s-lg2);
+    justify-content: center;
+    position: absolute;
+    right: calc((var(--nav-height) / 2) - (var(--s-lg2) / 2) + var(--s));
+    top: calc((var(--nav-height) / 2) - (var(--s-lg2) / 2));
+    user-select: none;
+    width: var(--s-lg2);
+    z-index: 4;
+
+    a {
+      color: var(--c-fg);
+      text-decoration: none;
+      transition: color .3s ease;
+    }
+
+    input {
+      cursor: pointer;
+      display: block;
+      height: var(--s-lg2);
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      width: var(--s-lg2);
+      z-index: 5; /* Invisible checkbox above everything here */
+      
+      &:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+      }
+
+      &:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+      }
+
+      &:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+      }
+
+      &:checked ~ .menu {
+        transform: none;
+      }
+    }
+
+    span {
+      background-color: var(--c-fg);
+      border-radius: .5rem;
+      display: block;
+      height: 4px;
+      margin-bottom: var(--s-sl3);
+      position: relative;
+      width: var(--s-lg2);
+      z-index: 4;
+      
+      transform-origin: 4px 0px;      
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity .55s ease;
+
+      &:first-child {
+        transform-origin: 0% 0%;
+      }
+
+      &:nth-last-child(2) {
+        transform-origin: 0% 100%;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .menu {
+      background: #ededed;
+      position: absolute;
+      right: calc(((var(--nav-height) / 2) - (var(--s-lg2) / 2) + var(--s)) * -1); /* Hamburger position */
+      top: calc((var(--nav-height) / 2) + (var(--s-lg2) / 2)); /* Hamburger position */
+      width: 100vw;
+      list-style-type: none;
+      z-index: 4;
+
+      transform: translate(100vw, 0);
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+      li {
+        padding: 10px 0;
+        font-size: 22px;
+
+        label {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.valley-cut-mask {
+  height: 6rem;
+  position: relative;
+  width: 100vw;
+  z-index: 2;
+}
+
+main {
+  background: linear-gradient(135deg, var(--c-grad-start) 20%, var(--c-grad-end) 120%);
+  height: calc(100vh - var(--nav-height));
+  position: absolute;
+  top: var(--nav-height);
+  width: 100%;
+
+  h1 {
+    font-family: 'Fontjek', 'Gravity', sans-serif;
+    font-size: var(--f-lg4);
+    line-height: 1;
+  }
+}

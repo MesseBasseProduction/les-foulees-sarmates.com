@@ -1,0 +1,53 @@
+main.home {
+  div.view-wrapper {
+    padding: calc(6rem + var(--s-lg1))  calc(var(--s-lg1) + var(--default-scroll-size)) var(--s-lg1) var(--s-lg1);
+  }
+
+  h1 {
+    margin-bottom: var(--s-lg1);
+  }
+
+  h2 {
+    font-size: var(--f-lg3);
+  }
+
+  h3 {
+    font-size: var(--f-lg1);
+    margin-bottom: var(--s-lg1);
+  }
+
+  p {
+    margin-bottom: var(--f);
+  }
+
+  a.button {
+    color: var(--c-bg);
+    display: flex;
+    font-size: var(--f-lg3);
+    margin: 0 auto;
+    padding: var(--s) var(--s-lg1);
+    width: fit-content;
+    margin-bottom: var(--s-lg1);
+  }
+
+  .race-info {
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.8)), url(/assets/img/sermaise-drone.webp);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: var(--s-lg1);
+    margin-left: calc(var(--s-lg1) * -1);
+    mask-image: linear-gradient(0deg, transparent, rgba(0, 0, 0, 1) 8% 92%, transparent);
+    padding: var(--s-lg3) var(--s-lg1);
+    text-align: justify;
+    text-indent: var(--f);
+    width: 100vw;
+
+    h4 {
+      font-size: var(--f-lg1);
+      margin-top: var(--s-lg1);
+      text-indent: 0;
+      text-align: center;
+    }
+  }
+}

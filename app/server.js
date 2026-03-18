@@ -1,4 +1,4 @@
-global['url'] = 'webboilerplate'; // Ensure no slash at the end
+global['url'] = 'les-foulees-sarmates.com'; // Ensure no slash at the end
 global['version'] = '0.0.1';
 global['port'] = 8000;
 
