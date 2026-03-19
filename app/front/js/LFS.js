@@ -17,7 +17,7 @@ class LFS {
       targetDom: document.querySelector('#countdown')
     });
     new window.ScrollBar({
-      target: document.querySelector('#scene.home'),
+      target: document.body,
       minSize: 200,
       style: {
         color: '#B93A58'

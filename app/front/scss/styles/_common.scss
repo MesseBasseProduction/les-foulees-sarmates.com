@@ -9,14 +9,17 @@ nav {
   padding: var(--s);
   position: relative;
   text-align: initial;
-  width: 100%;
+  width: 100vw;
   z-index: 3;
+  filter: drop-shadow(1px 1px 4px var(--c-fg-a80));
 
   a.page-title {
     color: var(--c-fg);
     display: inline-block;
     font-family: 'Fontjek', 'Gravity', sans-serif;
+    position: relative;
     text-decoration: none;
+    z-index: 4;
 
     img {
       height: 100%;
@@ -123,25 +126,75 @@ nav {
       }
     }
   }
-}
 
-.valley-cut-mask {
-  height: 6rem;
-  position: relative;
-  width: 100vw;
-  z-index: 2;
+  .valley-cut-mask {
+    left: 0;
+    position: absolute;
+    width: 100vw;
+
+    &::before {
+      content: '';
+      aspect-ratio: 1354 / 260; /* Match the valley-cut aspect-ratio */
+      display: block;
+      background-color: var(--c-bg);
+      left: 0;
+      mask-image: url('/assets/img/valley-cut.svg');
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }    
+  }
 }
 
 main {
-  background: linear-gradient(135deg, var(--c-grad-start) 20%, var(--c-grad-end) 120%);
-  height: calc(100vh - var(--nav-height));
-  position: absolute;
-  top: var(--nav-height);
-  width: 100%;
+  width: 100vw;
 
   h1 {
     font-family: 'Fontjek', 'Gravity', sans-serif;
     font-size: var(--f-lg4);
     line-height: 1;
+  }
+}
+
+footer {
+  background-color: var(--c-bg);
+  display: flex;
+  flex-direction: column;
+  height: var(--nav-height);
+  justify-content: center;
+  width: 100vw;
+  z-index: 3;
+  filter: drop-shadow(1px 1px 4px var(--c-fg-a80));
+
+  .valley-cut-mask {
+    bottom: var(--nav-height);
+    left: 0;
+    position: absolute;
+    width: 100vw;
+
+    &::before {
+      content: '';
+      aspect-ratio: 1354 / 260; /* Match the valley-cut aspect-ratio */
+      display: block;
+      background-color: var(--c-bg);
+      transform: rotate(180deg);
+
+      left: 0;
+      mask-image: url('/assets/img/valley-cut.svg');
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }    
+  }
+
+  a {
+    color: var(--c-fg);
+    font-family: 'Catamaran' 'Gravity' sans-serif;
+    font-size: var(--f-lg1);
+    text-decoration: none;
   }
 }

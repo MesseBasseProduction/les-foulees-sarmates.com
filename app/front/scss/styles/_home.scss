@@ -1,10 +1,12 @@
 main.home {
   div.view-wrapper {
-    padding: calc(6rem + var(--s-lg1))  calc(var(--s-lg1) + var(--default-scroll-size)) var(--s-lg1) var(--s-lg1);
+    padding: calc(6rem + var(--s-lg1)) var(--s-lg1);
   }
 
   h1 {
+    margin: 0 auto;
     margin-bottom: var(--s-lg1);
+    max-width: 300px;
   }
 
   h2 {
@@ -16,12 +18,17 @@ main.home {
     margin-bottom: var(--s-lg1);
   }
 
+  h4 {
+    font-family: 'Fontjek', 'Gravity', sans-serif;
+    font-size: var(--f-lg3);
+    margin-bottom: var(--s-lg1);
+  }
+
   p {
     margin-bottom: var(--f);
   }
 
   a.button {
-    color: var(--c-bg);
     display: flex;
     font-size: var(--f-lg3);
     margin: 0 auto;
@@ -32,7 +39,7 @@ main.home {
 
   .race-info {
     aspect-ratio: 16 / 9;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.8)), url(/assets/img/sermaise-drone.webp);
+    background: linear-gradient(0deg, var(--c-bg-a80)), url('/assets/img/sermaise-drone.webp');
     background-position: center;
     background-size: cover;
     margin-bottom: var(--s-lg1);
@@ -43,11 +50,56 @@ main.home {
     text-indent: var(--f);
     width: 100vw;
 
-    h4 {
+    h5 {
       font-size: var(--f-lg1);
-      margin-top: var(--s-lg1);
+      margin-top: var(--s-lg2);
       text-indent: 0;
       text-align: center;
+    }
+  }
+
+  .partners-carousel {
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    display: flex;
+    flex: 0 0 100%;
+    height: 10rem;
+    margin-left: calc(var(--s-lg1)*-1);
+    padding-bottom: var(--s-lg1);
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+
+    .slides-track {
+      display: flex;
+      gap: var(--s);
+      padding-right: var(--s);
+      will-change: transform;
+      animation: scroll 20s linear infinite;
+
+      .item {
+        background-color: var(--c-bg-a80);
+        border-radius: var(--f);
+        box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0;
+        padding: var(--s-sl2) var(--s);
+        justify-content: center;
+        align-items: center;
+        width: 20rem;
+
+        img {
+          height: 100%;
+          max-width: 100%;
+          object-fit: contain;
+          width: auto;
+        }
+      }
     }
   }
 }

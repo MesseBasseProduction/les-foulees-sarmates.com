@@ -1,25 +1,25 @@
 @font-face {
   font-family: 'Catamaran';
-  src: url('../../../assets/font/Catamaran-Pro.ttf') format('truetype'),
-    url('../../../assets/font/Catamaran-Pro.woff') format('woff');
+  src: url('/assets/font/Catamaran-Pro.ttf') format('truetype'),
+    url('/assets/font/Catamaran-Pro.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Doulos';
-  src: url('../../../assets/font/Doulos-SIL.ttf') format('truetype'),
-    url('../../../assets/font/Doulos-SIL.woff') format('woff');
+  src: url('/assets/font/Doulos-SIL.ttf') format('truetype'),
+    url('/assets/font/Doulos-SIL.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Gravity';
-  src: url('../../../assets/font/Gravity.ttf') format('truetype'),
-    url('../../../assets/font/Gravity.woff') format('woff');
+  src: url('/assets/font/Gravity.ttf') format('truetype'),
+    url('/assets/font/Gravity.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Fontjek';
-  src: url('../../../assets/font/Fontjek.ttf') format('truetype'),
-    url('../../../assets/font/Fontjek.woff') format('woff');
+  src: url('/assets/font/Fontjek.ttf') format('truetype'),
+    url('/assets/font/Fontjek.woff') format('woff');
 }
 
 * {
@@ -37,7 +37,9 @@ html, body {
 }
 
 body {
-  background: linear-gradient(135deg, var(--c-grad-start) 20%, var(--c-grad-end) 120%);
+  background: url('/assets/img/topology.webp'), linear-gradient(115deg, var(--c-grad-start) 20%, var(--c-grad-end) 120%);
+  background-position: center;
+  background-size: contain;
   color: var(--c-fg);
   font-size: var(--f);
   font-family: 'Gravity', sans-serif;
@@ -49,7 +51,7 @@ body {
 }
 
 a.button {
-  background: var(--c-primary);
+  background: var(--c-bg);
   border-radius: var(--f);
   color: var(--c-fg);
   cursor: pointer;
@@ -59,6 +61,11 @@ a.button {
   padding: var(--s-sl1) var(--s-lg1);
   text-decoration: none;
   text-transform: uppercase;
+
+  &.primary {
+    background: var(--c-primary);
+    color: var(--c-bg);
+  }
 }
 
 .t-center {
