@@ -1,0 +1,10 @@
+services:
+  les-foulees-sarmates:
+    container_name: les_foulees_sarmates_node
+    build: .
+    command: npm run start
+    restart: always
+    ports:
+      - 8080:8080
+    environment:
+      - NODE_ENV=prod
