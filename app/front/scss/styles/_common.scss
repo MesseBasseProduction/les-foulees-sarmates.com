@@ -1,7 +1,7 @@
 /* z-indexes */
 /* z-index: 1 for main */
 /* z-index: 2 for valley cut mask */
-/* z-index: 3 for nav */
+/* z-index: 3 for nav/footer */
 
 nav {
   background-color: var(--c-bg);
@@ -79,7 +79,7 @@ nav {
 
     span {
       background-color: var(--c-fg);
-      border-radius: .5rem;
+      border-radius: var(--f);
       display: block;
       height: 4px;
       margin-bottom: var(--s-sl3);
@@ -105,12 +105,12 @@ nav {
     }
 
     .menu {
-      background: #ededed;
+      background: var(--c-bg-a80);
+      list-style-type: none;
       position: absolute;
       right: calc(((var(--nav-height) / 2) - (var(--s-lg2) / 2) + var(--s)) * -1); /* Hamburger position */
       top: calc((var(--nav-height) / 2) + (var(--s-lg2) / 2)); /* Hamburger position */
       width: 100vw;
-      list-style-type: none;
       z-index: 4;
 
       transform: translate(100vw, 0);
@@ -118,10 +118,15 @@ nav {
 
       li {
         padding: 10px 0;
-        font-size: 22px;
+        font-size: var(--f-lg2);
+        text-align: center;
 
-        label {
-          cursor: pointer;
+        &.primary {
+          background-color: var(--c-primary);
+
+          a {
+            color: var(--c-bg);
+          }
         }
       }
     }
@@ -151,6 +156,10 @@ nav {
 main {
   width: 100vw;
 
+  div.view-wrapper {
+    padding: calc(6rem + var(--s-lg1)) var(--s-lg1);
+  }
+
   h1 {
     font-family: 'Fontjek', 'Gravity', sans-serif;
     font-size: var(--f-lg4);
@@ -169,24 +178,21 @@ footer {
   filter: drop-shadow(1px 1px 4px var(--c-fg-a80));
 
   .valley-cut-mask {
-    bottom: var(--nav-height);
-    left: 0;
-    position: absolute;
-    width: 100vw;
+    width: 100%;
 
     &::before {
       content: '';
       aspect-ratio: 1354 / 260; /* Match the valley-cut aspect-ratio */
       display: block;
       background-color: var(--c-bg);
-      transform: rotate(180deg);
+      transform: rotate(180deg) translateY(-1px); /* For some reason, rotate offsets by 1px ... */
 
       left: 0;
       mask-image: url('/assets/img/valley-cut.svg');
       mask-repeat: no-repeat;
       mask-size: cover;
       position: absolute;
-      bottom: 0;
+      bottom: var(--nav-height);
       width: 100%;
     }    
   }

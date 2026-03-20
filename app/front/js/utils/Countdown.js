@@ -57,6 +57,9 @@ class Countdown {
     sec = (sec === 0) ? '' : (sec === 1) ? `${sec} seconde` : `${sec} secondes`;
     // Update DOM and check for stop condition
     this._targetDom.innerHTML = `${days}${hrs}${min}${sec}`;
+    // Animate text
+    this._targetDom.style.transform = 'scale(1.05)';
+    setTimeout(() => this._targetDom.style.transform = 'scale(1)', 90);
     if (this._checkValidity() === false) {
       this.stopClock();
       this._targetDom.innerHTML = `Compte à rebourd terminé!<br>À l'année prochaine 😉`;

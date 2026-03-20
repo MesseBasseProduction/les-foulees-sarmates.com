@@ -50,6 +50,10 @@ body {
   }
 }
 
+a {
+  color: var(--c-primary);
+}
+
 a.button {
   background: var(--c-bg);
   border-radius: var(--f);
