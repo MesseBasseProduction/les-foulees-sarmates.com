@@ -1,5 +1,5 @@
 global['url'] = 'les-foulees-sarmates.com'; // Ensure no slash at the end
-global['version'] = '0.0.1';
+global['version'] = '0.0.2';
 global['port'] = 8080;
 
 console.log(`${(new Date()).toISOString()} | ${global['url']} v${global['version']} | Starting frontend web server`);
@@ -39,7 +39,11 @@ app.all('*', (req, res) => {
     pageDescription: '',
   });
 });
-// Start server console
-app.listen(port, () => {
-  console.log(`${(new Date()).toISOString()} | ${global['url']} v${version} | Server started and listening on port ${port}`);
+
+// Now update sitemap with given routes
+require('./utils/SiteMapGenerator.js')([appRoutes], () => {
+  // Start server console
+  app.listen(port, () => {
+    console.log(`${(new Date()).toISOString()} | ${global['url']} v${version} | Server started and listening on port ${port}`);
+  });
 });

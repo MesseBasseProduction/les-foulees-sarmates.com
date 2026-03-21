@@ -5,9 +5,13 @@ class LFS {
 
 
   constructor() {
+    this._buildHomepage();
+
+/* TODO end zeaz
     if (document.querySelector('#scene.home') !== null) {
       this._buildHomepage();
     }
+*/
   }
 
 

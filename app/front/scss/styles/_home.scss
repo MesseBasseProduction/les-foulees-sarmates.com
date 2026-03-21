@@ -1,7 +1,5 @@
 main.home {
   h1 {
-    margin: 0 auto;
-    margin-bottom: var(--s-lg1);
     max-width: 300px;
   }
 
@@ -20,10 +18,6 @@ main.home {
     margin-bottom: var(--s-lg1);
   }
 
-  p {
-    margin-bottom: var(--f);
-  }
-
   a.button {
     display: flex;
     font-size: var(--f-lg3);
@@ -33,11 +27,9 @@ main.home {
     margin-bottom: var(--s-lg1);
   }
 
-  .race-cto,
   .race-info,
   .race-more-info,
-  .race-partners,
-  .race-countdown {
+  .race-partners {
     margin-bottom: var(--s-lg1);
   }
 
@@ -120,12 +112,6 @@ main.home {
           }
         }
       }
-    }
-  }
-
-  .race-countdown {
-    h3 {
-      transition: .1s transform;
     }
   }
 }
