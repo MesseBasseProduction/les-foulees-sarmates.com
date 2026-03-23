@@ -4,13 +4,17 @@ main.about {
     margin-bottom: var(--s-sl2);
   }
 
-  .race-credits,
-  .race-ip {
+  .about-credits,
+  .about-ip {
     margin-bottom: var(--s-lg1);
   }
 
-  .race-credits {
+  .about-credits {
     div {
+      margin-bottom: var(--s-lg1);
+    }
+
+    p:last-of-type {
       margin-bottom: var(--s-lg1);
     }
   }
