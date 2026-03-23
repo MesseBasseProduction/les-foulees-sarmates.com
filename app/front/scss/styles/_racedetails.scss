@@ -1,0 +1,48 @@
+main.race-details {
+  h3 {
+    margin-bottom: var(--f);
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: var(--s-lg1);
+  }
+
+  .race-topology {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--s-lg1);
+
+    img {
+      filter: drop-shadow(0 0 var(--s) var(--c-fg));
+      margin-bottom: var(--s);
+      width: 100%;
+    }
+
+    label {
+      margin-bottom: var(--s);
+    }
+
+    .topology-selector {
+      display: flex;
+      gap: var(--s-sl1);
+      justify-content: center;
+
+      a {
+        background-color: var(--c-bg-a30);
+        border: solid 2px var(--c-bg);
+        border-radius: var(--s-sl2);
+        font-size: var(--f-lg1);
+        color: var(--c-fg);
+        font-weight: bold;
+        padding: var(--s-sl4) var(--s-sl2);
+        transition: all var(--t-duration);
+
+        &.selected {
+          background-color: var(--c-bg-a80);
+          border-color: var(--c-primary);
+        }
+      }
+    }
+  }
+}

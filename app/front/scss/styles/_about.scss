@@ -1,9 +1,4 @@
 main.about {
-  h2 {
-    font-size: var(--f-lg1);
-    margin-bottom: var(--s-sl2);
-  }
-
   .about-credits,
   .about-ip {
     margin-bottom: var(--s-lg1);
@@ -12,9 +7,14 @@ main.about {
   .about-credits {
     div {
       margin-bottom: var(--s-lg1);
+
+      h2 {
+        font-size: var(--f-lg1);
+        margin-bottom: var(--s-sl2);
+      }
     }
 
-    p:last-of-type {
+    & > p:last-of-type {
       margin-bottom: var(--s-lg1);
     }
   }

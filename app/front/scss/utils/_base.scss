@@ -37,7 +37,7 @@ html, body {
 }
 
 body {
-  background: url('/assets/img/topology.webp'), linear-gradient(115deg, var(--c-grad-start) 20%, var(--c-grad-end) 120%);
+  background: url('/assets/img/topology/sermaise.webp'), linear-gradient(115deg, var(--c-grad-start) 20%, var(--c-grad-end) 120%);
   background-position: center;
   background-size: contain;
   color: var(--c-fg);
@@ -54,17 +54,26 @@ a {
   color: var(--c-primary);
 }
 
+hr {
+  border: solid 1px;
+  color: var(--c-primary);
+  margin: var(--s-lg1) 0;
+}
+
 a.button {
   background: var(--c-bg);
   border-radius: var(--f);
   color: var(--c-fg);
   cursor: pointer;
-  display: inline-block;
-  font-size: var(--f-lg1);
+  display: flex;
+  font-size: var(--f-lg3);
   font-weight: bold;
-  padding: var(--s-sl1) var(--s-lg1);
+  margin: 0 auto;
+  margin-bottom: var(--s-lg1);
+  padding: var(--s) var(--s-lg1);
   text-decoration: none;
   text-transform: uppercase;
+  width: fit-content;
 
   &.primary {
     background: var(--c-primary);

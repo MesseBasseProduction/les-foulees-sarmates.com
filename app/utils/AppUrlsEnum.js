@@ -21,6 +21,26 @@ module.exports = Object.freeze([
       '/info'
     ]
   }, {
+    mainUrl: '/informations/5k',
+    rootUrls: [
+      '/informations/5k'
+    ],
+    redirectionTarget: '5k',
+    redirectUrls: [
+      '/les-5k-de-la-plaine',
+      '/5k'
+    ]
+  }, {
+    mainUrl: '/informations/10k',
+    rootUrls: [
+      '/informations/10k'
+    ],
+    redirectionTarget: '10k',
+    redirectUrls: [
+      '/les-10k-de-la-plaine',
+      '/10k'
+    ]
+  }, {
     mainUrl: '/benevolat',
     rootUrls: [
       '/benevolat'

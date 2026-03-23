@@ -1,0 +1,44 @@
+{{> nav}}
+<main id="scene" class="race-details">
+  <div class="view-wrapper">
+    <div class="race-info">
+      <h1>Les 10k de la Plaine</h1>
+      <p>Une course dynamique et accessible, Les 10k de la Plaine vous offrent un parcours équilibré, entre hameaux, mares et plaines verdoyantes. Un tracé mi-sentier, mi-route, adapté aux coureurs intermédiaires ou confirmés et parfait pour allier performance et plaisir.</p>
+      <h3>Au programme :</h3>
+      <ul>
+        <li>5 hameaux traversés</li>
+        <li>10,07 km de distance totale</li>
+        <li>113 m de dénivelé positif (D+)</li>
+        <li>112 m de dénivelé négatif (D-)</li>
+        <li>Barrière horaire de 2h (12 min/km)</li>
+      </ul>
+      <div class="race-topology">
+        <img src="/assets/img/topology/10k-profile.webp" id="topology-image" alt="Profil topologique des 10k de la Plaine">
+        <label id="topology-label">Topologie de la course<br><i>Départ à gauche, arrivée à droite</i></label>
+        <div id="topology-selector" class="topology-selector">
+          <a class="selected" data-type="topology" data-label="Topologie de la course<br><i>Départ à gauche, arrivée à droite</i>" data-image="/assets/img/topology/10k-profile.webp">Topologie</a>
+          <a data-type="slope" data-label="Profil de pente de la course<br><i>Jaune : Plat, Rouge : D+, Vert D-</i>" data-image="/assets/img/topology/10k-slope.webp">Pente</a>
+          <a data-type="surface" data-label="Surfaces de la course<br><i>Bleu : Route, Vert : Sentier</i>" data-image="/assets/img/topology/10k-surface.webp">Surface</a>
+        </div>
+      </div>
+      <p>Envie d'une aventure sportive et engagée ? Les 10 km de la Plaine, épreuve des Foulées Sarmates, vous offre un parcours dynamique, à travers les paysages préservés de Sermaise. Entre hameaux pittoresques, mares et plaines verdoyantes, laissez-vous emporter par l'énergie de notre village et l'esprit convivial de cette course nature.</p>
+      <p>Traversez la vallée de l'Orge et ses alentours, sur un tracé mi-sentier, mi-route, idéal pour les coureurs en quête de performance ou de plaisir. Découvrez les écarts et lieux-dits qui font le charme de Sermaise, dans une ambiance chaleureuse et solidaire.</p>
+      <p>En participant à cette course, vous soutenez directement la lutte contre le cancer du sein. 50 % des bénéfices seront reversés à la Ligue contre le cancer, dans le cadre d'Octobre Rose. Courir pour le plaisir, courir pour la santé, courir pour une cause qui nous touche tous.</p>
+    </div>
+    <hr>
+    <div class="race-cto">
+      <h1>Les Foulées Sarmates</h1>
+      <h2>17 Octobre 2026</h2>
+      <h3><i>Sermaise – 91530</i></h3>
+      <h4>5 km - 10 km - 21 km</h4>
+      <h3>Devenez pionnier·e·s de cette première édition</h3>
+      <a href="https://chronometrage.com/events/lesfouleessarmates" target="_blank" rel="noopener noreferrer" class="button primary" alt="Lien de navigation externe vers l'inscription en ligne sur chronometrage.com">S'inscrire</a>
+    </div>
+    <div class="race-countdown">
+      <p>⏲️ <b>Le compte à rebourd à commencé !</b> ⏲️<br>Les <i>Foulées Sarmates</i> 2026, première édition, c'est dans :</p>
+      <h3 id="countdown"></h3>
+    </div>
+  </div>
+</main>
+{{> footer}}
+<script type="text/javascript" src="/assets/dist/LFS.bundle.js"></script>

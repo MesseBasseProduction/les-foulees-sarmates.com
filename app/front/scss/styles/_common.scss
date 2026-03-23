@@ -44,7 +44,7 @@ nav {
     a {
       color: var(--c-fg);
       text-decoration: none;
-      transition: color .3s ease;
+      transition: color var(--t-duration) ease;
     }
 
     input {
@@ -88,8 +88,8 @@ nav {
       z-index: 4;
       
       transform-origin: 4px 0px;      
-      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-        opacity .55s ease;
+      transition: transform var(--t-duration) cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity var(--t-duration) ease;
 
       &:first-child {
         transform-origin: 0% 0%;
@@ -114,7 +114,7 @@ nav {
       z-index: 4;
 
       transform: translate(100vw, 0);
-      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+      transition: transform var(--t-duration) cubic-bezier(0.77, 0.2, 0.05, 1.0);
 
       li {
         padding: 10px 0;
@@ -168,17 +168,27 @@ main {
     margin-bottom: var(--s-lg1);
   }
 
+  h2 {
+    font-size: var(--f-lg3);
+  }
+
+  h3 {
+    font-size: var(--f-lg1);
+    margin-bottom: var(--s-lg1);
+  }
+
+  h4 {
+    font-family: 'Fontjek', 'Gravity', sans-serif;
+    font-size: var(--f-lg3);
+    margin-bottom: var(--s-lg1);
+  }
+
   p {
     margin-bottom: var(--f);
   }
 
   .race-cto {
     margin-bottom: var(--s-lg1);
-
-    h3 {
-      font-size: var(--f-lg1);
-      margin-bottom: var(--s-lg1);
-    }
   }
 
   .race-countdown {
@@ -186,6 +196,10 @@ main {
 
     h3 {
       transition: .1s transform;
+    }
+
+    h2 {
+      font-size: var(--f-lg3);
     }
   }
 }

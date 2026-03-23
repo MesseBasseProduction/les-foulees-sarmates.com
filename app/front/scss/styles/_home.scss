@@ -3,30 +3,6 @@ main.home {
     max-width: 300px;
   }
 
-  h2 {
-    font-size: var(--f-lg3);
-  }
-
-  h3 {
-    font-size: var(--f-lg1);
-    margin-bottom: var(--s-lg1);
-  }
-
-  h4 {
-    font-family: 'Fontjek', 'Gravity', sans-serif;
-    font-size: var(--f-lg3);
-    margin-bottom: var(--s-lg1);
-  }
-
-  a.button {
-    display: flex;
-    font-size: var(--f-lg3);
-    margin: 0 auto;
-    padding: var(--s) var(--s-lg1);
-    width: fit-content;
-    margin-bottom: var(--s-lg1);
-  }
-
   .race-info,
   .race-more-info,
   .race-partners {

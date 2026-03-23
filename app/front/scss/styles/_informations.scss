@@ -1,0 +1,19 @@
+main.info {
+  .race-info,
+  .organisation-info,
+  .charity-info {
+    margin-bottom: var(--s-lg1);
+  }
+
+  .race-info {
+    .button {
+      margin-top: var(--s-lg1);
+
+      &.race {
+        font-size: var(--f-lg1);
+        margin-bottom: var(--s-sl4);
+        margin-top: inherit;
+      }
+    }
+  }
+}
