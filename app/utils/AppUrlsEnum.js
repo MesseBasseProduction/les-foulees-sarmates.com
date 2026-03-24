@@ -25,7 +25,7 @@ module.exports = Object.freeze([
     rootUrls: [
       '/informations/5k'
     ],
-    redirectionTarget: '5k',
+    redirectionTarget: 'races/5k',
     redirectUrls: [
       '/les-5k-de-la-plaine',
       '/5k'
@@ -35,10 +35,20 @@ module.exports = Object.freeze([
     rootUrls: [
       '/informations/10k'
     ],
-    redirectionTarget: '10k',
+    redirectionTarget: 'races/10k',
     redirectUrls: [
       '/les-10k-de-la-plaine',
       '/10k'
+    ]
+  }, {
+    mainUrl: '/informations/21k',
+    rootUrls: [
+      '/informations/21k'
+    ],
+    redirectionTarget: 'races/21k',
+    redirectUrls: [
+      '/le-semi-des-hameaux',
+      '/21k'
     ]
   }, {
     mainUrl: '/benevolat',

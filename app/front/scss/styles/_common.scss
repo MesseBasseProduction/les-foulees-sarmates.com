@@ -120,6 +120,8 @@ nav {
         padding: 10px 0;
         font-size: var(--f-lg2);
         text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
 
         &.primary {
           background-color: var(--c-primary);
@@ -183,6 +185,11 @@ main {
     margin-bottom: var(--s-lg1);
   }
 
+  h5 {
+    font-size: var(--f-lg1);
+    font-weight: initial;
+  }
+
   p {
     margin-bottom: var(--f);
   }
@@ -193,14 +200,6 @@ main {
 
   .race-countdown {
     margin-bottom: var(--s-lg1);
-
-    h3 {
-      transition: .1s transform;
-    }
-
-    h2 {
-      font-size: var(--f-lg3);
-    }
   }
 }
 

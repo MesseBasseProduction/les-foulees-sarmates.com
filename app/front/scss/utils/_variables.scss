@@ -43,10 +43,10 @@
   --s-sl4: .4rem;
 
   /* Font sizes */
-  --f: var(--s);
-  --f-lg1: calc(var(--s) * 1.33);
-  --f-lg2: calc(var(--s) * 1.66);
-  --f-lg3: calc(var(--s) * 2.5);
+  --f: calc(var(--s) * 1.15);
+  --f-lg1: calc(var(--f) * 1.33);
+  --f-lg2: calc(var(--f) * 1.66);
+  --f-lg3: calc(var(--f) * 2.5);
   --f-lg4: var(--s-lg4);
   --f-sl1: var(--s-sl1);
   --f-sl2: var(--s-sl2);

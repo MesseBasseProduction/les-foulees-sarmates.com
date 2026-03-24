@@ -7,9 +7,10 @@ class Countdown {
     this._intervalId = -1;
 
     if (this._checkValidity() === true) {
+      this._prepareDom(options);
       this.startClock();
     } else {
-      this._targetDom.innerHTML = `Compte à rebourd terminé!<br>À l'année prochaine 😉`;
+      this._targetDom.innerHTML = `<p>Compte à rebourd terminé!<br>À l'année prochaine 😉</p>`;
     }
   }
 
@@ -41,6 +42,43 @@ class Countdown {
   }
 
 
+  _prepareDom(options) {
+    this._targetDom.style.display = 'flex';
+    this._targetDom.style.justifyContent = 'center';
+    this._targetDom.style.transition = '.1s transform';
+
+    const containers = [
+      document.createElement('DIV'), // D
+      document.createElement('DIV'), // H
+      document.createElement('DIV'), // M
+      document.createElement('DIV')  // S
+    ];
+
+    for (let i = 0; i < containers.length; ++i) {
+      containers[i].style.borderRadius = '.5rem';
+      containers[i].style.color = `${options?.color ? options.color : 'black'}`;
+      containers[i].style.display = 'flex';
+      containers[i].style.flexDirection = 'column';
+      containers[i].style.width = '8rem';
+
+      const number = document.createElement('P');
+      const text = document.createElement('P');
+
+      number.style.fontSize = `${options?.fontSize ? options.fontSize : '18pt'}`;
+      number.style.fontWeight = 'bold';
+      number.style.marginBottom = '.5rem';
+      number.style.textTransform = 'uppercase';
+      text.style.fontSize = `${options?.fontSize ? 'calc(' + options.fontSize + '/ 3)' : '10pt'}`;
+      text.style.margin = '0';
+      text.style.textTransform = 'uppercase';
+
+      containers[i].appendChild(number);
+      containers[i].appendChild(text);
+      this._targetDom.appendChild(containers[i]);
+    }
+  }
+
+
   _tick() {
     const now = new Date().getTime();
     const distance = this._targetDate - now;
@@ -49,22 +87,35 @@ class Countdown {
     let hrs = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let min = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     let sec = Math.floor((distance % (1000 * 60)) / 1000);
-    // Adjust plurals and hide empty min or sec if required
-    days = (days === 0) ? '' : (days === 1) ? '<h2>1 jour</h2>' : `<h2>${days} jours</h2>`;
-    hrs = (hrs === 0) ? '' : (hrs === 1) ? '1 heure, ' : `${hrs} heures, `;
-    min = (hrs === '' && min === 0) ? '' : (min <= 1) ? `${min} minute ` : `${min} minutes `;
-    if (min !== '' && sec > 0) { min += 'et '; }
-    sec = (sec === 0) ? '' : (sec === 1) ? `${sec} seconde` : `${sec} secondes`;
-    // Update DOM and check for stop condition
-    this._targetDom.innerHTML = `${days}${hrs}${min}${sec}`;
+    // Update DOM numbers and texte
+    this._targetDom.children[0].firstChild.innerHTML = `${this.prefixZero(days)}`;
+    this._targetDom.children[0].lastChild.innerHTML = `${(days <= 1) ? 'jour' : 'jours'}`;
+    this._targetDom.children[1].firstChild.innerHTML = `${this.prefixZero(hrs)}`;
+    this._targetDom.children[1].lastChild.innerHTML = `${(hrs <= 1) ? 'heure' : 'heures'}`;
+    this._targetDom.children[2].firstChild.innerHTML = `${this.prefixZero(min)}`;
+    this._targetDom.children[2].lastChild.innerHTML = `${(min <= 1) ? 'minute' : 'minutes'}`;
+    this._targetDom.children[3].firstChild.innerHTML = `${this.prefixZero(sec)}`;
+    this._targetDom.children[3].lastChild.innerHTML = `${(sec <= 1) ? 'seconde' : 'secondes'}`;
     // Animate text
-    this._targetDom.style.transform = 'scale(1.05)';
+    this._targetDom.style.transform = 'scale(1.025)';
     setTimeout(() => this._targetDom.style.transform = 'scale(1)', 90);
+    // Check for stop condition
     if (this._checkValidity() === false) {
       this.stopClock();
-      this._targetDom.innerHTML = `Compte à rebourd terminé!<br>À l'année prochaine 😉`;
+      this._targetDom.innerHTML = `<p>Compte à rebourd terminé!<br>À l'année prochaine 😉</p>`;
     }
   }
+
+
+  prefixZero(input) {
+    if (input < 10) {
+      return `0${input}`;
+    }
+
+    return `${input}`;
+  }
+
+
 }
 
 
