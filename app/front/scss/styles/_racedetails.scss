@@ -1,21 +1,56 @@
 main.race-details {
-  h3 {
-    margin-bottom: var(--f);
-  }
-
-  ul {
-    list-style: none;
+  .race-essential-infos {
+    background-color: var(--c-bg-a50);
+    border-radius: .5rem;
     margin-bottom: var(--s-lg1);
+
+      ul {
+        list-style: none;
+        padding: var(--s-lg1);
+
+        li {
+          align-items: center;
+          background-color: var(--c-bg-a80);
+          border-radius: .5rem;
+          display: flex;
+          font-size: var(--f);
+          gap: var(--s-sl2);
+          margin-bottom: var(--s-sl4);
+          padding: var(--s-sl2) var(--s-lg2);
+
+          &.primary,
+          &.list-cto {
+            background-color: var(--c-primary);
+            color: var(--c-bg);
+            font-size: var(--f-lg1);
+            font-weight: bold;
+            justify-content: center;
+            margin-bottom: var(--s-lg1);
+            text-transform: uppercase;
+          }
+
+          &.list-cto {
+            font-size: var(--f);
+            margin-bottom: 0;
+            margin-top: var(--s-lg1);
+          }
+
+          img {
+            height: var(--f-lg1);
+          }
+        }
+      }
   }
 
   .race-topology {
     display: flex;
-    flex-direction: column;
-    margin-bottom: var(--s-lg1);
+    flex-direction: column;    
+    margin: var(--s-lg1) 0;
 
     img {
-      filter: drop-shadow(0 0 var(--s) var(--c-fg));
+      filter: drop-shadow(0 0 var(--s-sl4) var(--c-fg-a50));
       margin-bottom: var(--s);
+      padding: 0 var(--s-sl1);
       width: 100%;
     }
 
@@ -29,20 +64,36 @@ main.race-details {
       justify-content: center;
 
       a {
-        background-color: var(--c-bg-a30);
-        border: solid 2px var(--c-bg);
+        background-color: var(--c-bg-a80);
+        border: solid 2px var(--c-bg-a80);
         border-radius: var(--s-sl2);
-        font-size: var(--f-lg1);
+        font-size: var(--f);
         color: var(--c-fg);
         font-weight: bold;
         padding: var(--s-sl4) var(--s-sl2);
-        transition: all var(--t-duration);
+        transition: border-color var(--t-duration);
 
         &.selected {
-          background-color: var(--c-bg-a80);
           border-color: var(--c-primary);
         }
       }
     }
+  }
+
+  .race-description {
+    background-color: var(--c-bg-a80);
+    border-radius: .5rem;
+    margin-bottom: var(--s-lg1);
+    padding: var(--s-lg1);
+
+    a.button.primary {
+      margin-bottom: 0;
+      margin-top: var(--s-lg1);
+    }
+  }
+
+  iframe {
+    border-radius: .5rem;
+    margin-bottom: var(--s-lg1);
   }
 }

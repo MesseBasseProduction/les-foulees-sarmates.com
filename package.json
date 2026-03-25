@@ -1,6 +1,6 @@
 {
   "name": "les-foulees-sarmates.com",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "",
   "keywords": [],
   "main": "app/server.js",

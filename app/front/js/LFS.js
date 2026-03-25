@@ -12,7 +12,7 @@ class LFS {
       this._handleTopologySelector();
     } else if (document.querySelector('#scene.volunteer')) {
       this._handleBecomeVolunteer();
-    } 
+    }
   }
 
 

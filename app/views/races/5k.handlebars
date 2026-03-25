@@ -1,38 +1,36 @@
 {{> nav}}
 <main id="scene" class="race-details">
   <div class="view-wrapper">
-    <div class="race-info">
-      <h1>Les 5k de la Plaine</h1>
-      <p>Une course ludique et conviviale, idéale pour ceux qui souhaitent profiter d'une expérience sportive sans pression. Les 5k de la Plaine vous invitent à traverser les paysages naturels de Sermaise, dans une ambiance festive et inclusive.</p>
-      <h3>Au programme :</h3>
+    <h1>Les 5k de la Plaine</h1>
+    <h3>Une course ludique et conviviale, idéale pour ceux qui souhaitent profiter d'une expérience sportive sans pression.</h3>
+    <div class="race-essential-infos">
       <ul>
-        <li>4 hameaux traversés</li>
-        <li>5,69 km de distance totale</li>
-        <li>91 m de dénivelé positif (D+)</li>
-        <li>90 m de dénivelé négatif (D-)</li>
-        <li>Barrière horaire de 1h (12 min/km)</li>
-      </ul>
-      <div class="race-topology">
-        <img src="/assets/img/topology/5k-profile.webp" id="topology-image" alt="Profil topologique des 5k de la Plaine">
-        <label id="topology-label">Topologie de la course<br><i>Départ à gauche, arrivée à droite</i></label>
-        <div id="topology-selector" class="topology-selector">
-          <a class="selected" data-type="topology" data-label="Topologie de la course<br><i>Départ à gauche, arrivée à droite</i>" data-image="/assets/img/topology/5k-profile.webp">Topologie</a>
-          <a data-type="slope" data-label="Profil de pente de la course<br><i>Jaune : Plat, Rouge : D+, Vert D-</i>" data-image="/assets/img/topology/5k-slope.webp">Pente</a>
-          <a data-type="surface" data-label="Surfaces de la course<br><i>Bleu : Route, Vert : Sentier</i>" data-image="/assets/img/topology/5k-surface.webp">Surface</a>
+        <li class="primary">17 Octobre 2026</li>
+        <li><img src="/assets/img/icon/flags.svg" alt=""> <b>Heure de départ :</b> 9h30</li>
+        <li><img src="/assets/img/icon/path.svg" alt=""> <b>Distance :</b> 5,69 km</li>
+        <li><img src="/assets/img/icon/climb.svg" alt=""> <b>D+ :</b> 91 m</li>
+        <li><img src="/assets/img/icon/town.svg" alt=""> <b>Hameaux traversés :</b> 4</li>
+        <li><img src="/assets/img/icon/stopwatch.svg" alt=""> <b>Temps limite :</b> 1h</li>
+        <li><img src="/assets/img/icon/runner.svg" alt=""> <b>Participants :</b> 100 max</li>
+        <div class="race-topology">
+          <img src="/assets/img/topology/5k-profile.webp" id="topology-image" alt="Profil topologique des 5k de la Plaine">
+          <label id="topology-label"><b>Topologie de la course</b><br><i>Départ à gauche, arrivée à droite</i></label>
+          <div id="topology-selector" class="topology-selector">
+            <a class="selected" data-type="topology" data-label="<b>Topologie de la course</b><br><i>Départ à gauche, arrivée à droite</i>" data-image="/assets/img/topology/5k-profile.webp">Topologie</a>
+            <a data-type="slope" data-label="<b>Profil de pente de la course</b><br><i>Jaune : Plat, Rouge : D+, Vert D-</i>" data-image="/assets/img/topology/5k-slope.webp">Pente</a>
+            <a data-type="surface" data-label="<b>Surfaces de la course</b><br><i>Bleu : Route, Vert : Sentier</i>" data-image="/assets/img/topology/5k-surface.webp">Surface</a>
+          </div>
         </div>
-      </div>
+        <a href="/assets/gpx/LFS26-5km-v4.gpx" download="LFS26 - Les 5k de la Plaine.gpx"><li class="list-cto">Télécharger la trace GPX</li></a>
+      </ul>
+    </div>
+    <div class="race-description">
+      <h4>Les 5k de la Plaine</h4>
       <p>Participez à une course nature, sans la pression de la distance : Les 5k de la Plaine, épreuve des <i>Foulées Sarmates</i>, sont faits pour vous ! Un parcours court, ludique et ouvert à toutes et tous, idéal pour les débutants ou les coureurs en quête d'une expérience conviviale. Traversez les paysages naturels de Sermaise, entre hameaux, plaines et forêt, et vibrez au rythme d'une course accessible, solidaire et festive.</p>
       <p>En participant à cette course, vous soutenez directement la lutte contre le cancer du sein. 50 % des bénéfices seront reversés à la Ligue contre le cancer, dans le cadre d'Octobre Rose. Courir pour le plaisir, courir pour la santé, courir pour une cause qui nous touche tous.</p>
-    </div>
-    <hr>
-    <div class="race-cto">
-      <h1>Les Foulées Sarmates</h1>
-      <h2>17 Octobre 2026</h2>
-      <h3><i>Sermaise – 91530</i></h3>
-      <h4>5 km - 10 km - 21 km</h4>
-      <h3>Devenez pionnier·e·s de cette première édition</h3>
       <a href="https://chronometrage.com/events/lesfouleessarmates" target="_blank" rel="noopener noreferrer" class="button primary" alt="Lien de navigation externe vers l'inscription en ligne sur chronometrage.com">S'inscrire</a>
     </div>
+    <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="3471583267646184074" data-units="metric" data-full-width="true" data-style="standard" data-surface-type="true" data-map-hash="13.05/48.533/2.0919" data-club-id="1870907" data-from-embed="true"></div><script src="https://strava-embeds.com/embed.js"></script>
     {{> countdown}}
   </div>
 </main>
