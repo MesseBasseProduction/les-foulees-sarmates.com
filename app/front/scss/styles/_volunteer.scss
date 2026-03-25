@@ -1,9 +1,15 @@
 main.volunteer {
   .become-volunteer {
-    margin-bottom: var(--s-lg1);
+    text-align: justify;
+    text-indent: var(--f);
 
     h3 {
       margin-bottom: var(--s-lg1);
+      text-align: center;
+    }
+
+    a.button.primary {
+      margin-bottom: 0;
     }
   }
 }

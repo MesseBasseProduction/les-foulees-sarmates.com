@@ -62,23 +62,32 @@ hr {
 
 a.button {
   background: var(--c-bg);
-  border-radius: var(--f);
+  border: solid 1px var(--c-fg-a20);
+  border-radius: var(--s-sl1);
   color: var(--c-fg);
   cursor: pointer;
   display: flex;
-  font-size: var(--f-lg3);
+  font-size: var(--f-lg1);
   font-weight: bold;
   margin: 0 auto;
   margin-bottom: var(--s-lg1);
-  padding: var(--s) var(--s-lg1);
+  padding: var(--s-sl1) var(--s);
   text-decoration: none;
   text-transform: uppercase;
   width: fit-content;
 
   &.primary {
     background: var(--c-primary);
+    border: solid 1px var(--c-bg);
     color: var(--c-bg);
   }
+}
+
+.card {
+  background-color: var(--c-bg-a50);
+  border-radius: .5rem;
+  margin-bottom: var(--s-lg1);
+  padding: var(--s-lg1);
 }
 
 .t-center {

@@ -2,122 +2,162 @@
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>les-foulees-sarmates.com/</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>les-foulees-sarmates.com/accueil</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>les-foulees-sarmates.com/home</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>les-foulees-sarmates.com/evenement</loc>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>les-foulees-sarmates.com/informations</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>les-foulees-sarmates.com/information</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>les-foulees-sarmates.com/infos</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>les-foulees-sarmates.com/info</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>les-foulees-sarmates.com/informations/5k</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <loc>les-foulees-sarmates.com/courses</loc>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>les-foulees-sarmates.com/course</loc>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>les-foulees-sarmates.com/les-5k-de-la-plaine</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>les-foulees-sarmates.com/les-5k-de-la-plaine</loc>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>les-foulees-sarmates.com/informations/5k</loc>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>les-foulees-sarmates.com/5k</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>les-foulees-sarmates.com/informations/10k</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>les-foulees-sarmates.com/les-10k-de-la-plaine</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>les-foulees-sarmates.com/les-10k-de-la-plaine</loc>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>les-foulees-sarmates.com/informations/10k</loc>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>les-foulees-sarmates.com/10k</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>les-foulees-sarmates.com/informations/21k</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>les-foulees-sarmates.com/le-semi-des-hameaux</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>les-foulees-sarmates.com/le-semi-des-hameaux</loc>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>les-foulees-sarmates.com/informations/21k</loc>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>les-foulees-sarmates.com/21k</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>les-foulees-sarmates.com/faq</loc>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>les-foulees-sarmates.com/foire-aux-questions</loc>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>les-foulees-sarmates.com/benevolat</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>les-foulees-sarmates.com/benevolat</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>les-foulees-sarmates.com/benevole</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>les-foulees-sarmates.com/devenir-benevole</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>les-foulees-sarmates.com/a-propos</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>les-foulees-sarmates.com/a-propos</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>les-foulees-sarmates.com/mentions-legales</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>les-foulees-sarmates.com/mention-legale</loc>
-    <lastmod>2026-03-24T10:13:13.126Z</lastmod>
+    <lastmod>2026-03-25T10:22:54.252Z</lastmod>
     <priority>0.80</priority>
   </url>
 </urlset>

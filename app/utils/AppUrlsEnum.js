@@ -10,45 +10,67 @@ module.exports = Object.freeze([
       '/home'
     ]
   }, {
-    mainUrl: '/informations',
+    mainUrl: '/evenement',
     rootUrls: [
-      '/informations'
+      '/evenement'
     ],
-    redirectionTarget: 'informations',
+    redirectionTarget: 'event',
     redirectUrls: [
+      '/informations',
       '/information',
       '/infos',
       '/info'
     ]
   }, {
-    mainUrl: '/informations/5k',
+    mainUrl: '/courses',
     rootUrls: [
-      '/informations/5k'
+      '/courses'
+    ],
+    redirectionTarget: 'races',
+    redirectUrls: [
+      '/course'
+    ]
+  }, {
+    mainUrl: '/les-5k-de-la-plaine',
+    rootUrls: [
+      '/les-5k-de-la-plaine'
     ],
     redirectionTarget: 'races/5k',
     redirectUrls: [
       '/les-5k-de-la-plaine',
+      '/informations/5k',
       '/5k'
     ]
   }, {
-    mainUrl: '/informations/10k',
+    mainUrl: '/les-10k-de-la-plaine',
     rootUrls: [
-      '/informations/10k'
+      '/les-10k-de-la-plaine'
     ],
     redirectionTarget: 'races/10k',
     redirectUrls: [
       '/les-10k-de-la-plaine',
+      '/informations/10k',
       '/10k'
     ]
   }, {
-    mainUrl: '/informations/21k',
+    mainUrl: '/le-semi-des-hameaux',
     rootUrls: [
-      '/informations/21k'
+      '/le-semi-des-hameaux'
     ],
     redirectionTarget: 'races/21k',
     redirectUrls: [
       '/le-semi-des-hameaux',
+      '/informations/21k',
       '/21k'
+    ]
+  }, {
+    mainUrl: '/faq',
+    rootUrls: [
+      '/faq'
+    ],
+    redirectionTarget: 'faq',
+    redirectUrls: [
+      '/foire-aux-questions'
     ]
   }, {
     mainUrl: '/benevolat',

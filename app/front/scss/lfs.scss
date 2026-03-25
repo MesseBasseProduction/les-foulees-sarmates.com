@@ -1,11 +1,13 @@
 @use 'utils/variables';
 @use 'utils/keyframes';
 @use 'utils/base';
-
 @use 'styles/common';
+
 @use 'styles/home';
-@use 'styles/informations';
+@use 'styles/event';
+@use 'styles/races';
 @use 'styles/racedetails';
+@use 'styles/faq';
 @use 'styles/volunteer';
 @use 'styles/about';
 @use 'styles/notfound';

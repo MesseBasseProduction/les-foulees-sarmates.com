@@ -10,6 +10,8 @@ class LFS {
 
     if (document.querySelector('#scene.race-details')) {
       this._handleTopologySelector();
+    } else if (document.querySelector('#scene.faq')) {
+      this._handleFaq();
     } else if (document.querySelector('#scene.volunteer')) {
       this._handleBecomeVolunteer();
     }
@@ -57,6 +59,25 @@ class LFS {
     for (let i = 0; i < selectors.children.length; ++i) {
       selectors.children[i].addEventListener('click', selectorClicked);
     }
+  }
+
+
+  _handleFaq() {
+    const questionClicked = function() {
+      const answer = this.nextElementSibling;
+      if (this.classList.contains('active')) {
+        this.classList.remove('active');
+        answer.style.maxHeight = null;
+      } else {
+        this.classList.add('active');
+        answer.style.maxHeight = `${answer.scrollHeight}px`;
+      } 
+    };
+
+    const questions = document.querySelectorAll('.question');
+    for (let i = 0; i < questions.length; ++i) {
+      questions[i].addEventListener('click', questionClicked);
+    } 
   }
 
 

@@ -1,0 +1,55 @@
+main.faq {
+  .frequent-questions {
+    background-color: var(--c-bg-a80);
+    padding: 0;
+
+    h3 {
+      font-family: 'Fontjek' 'Gravity' sans-serif;
+      font-size: var(--f-lg2);
+      padding-top: var(--s-lg1);
+    }
+
+    .question {
+      color: var(--c-fg);
+      cursor: pointer;
+      font-weight: bold;
+      padding: var(--s) var(--s-lg1);
+      position: relative;
+      margin: 0;
+      text-align: left;
+      width: 100%;
+      transition: all var(--t-duration);
+
+      &::after {
+        content: '\002B';
+        font-size: var(--f);
+        color: var(--c-fg);
+        right: var(--s-lg1);
+        position: absolute;
+        transform: translateX(100%);
+      }
+
+      &.active {
+        background-color: var(--c-primary-a10);
+
+        &::after {
+          content: "\2212";
+        }
+      }
+    }
+
+    .answer {
+      background-color: var(--c-bg);
+      max-height: 0;
+      overflow: hidden;
+      text-align: justify;
+      text-indent: var(--f);
+      transition: max-height var(--t-duration) ease-out;
+
+      p {
+        margin: 0;
+        padding: var(--s) var(--s-lg1);
+      }
+    }
+  }
+}

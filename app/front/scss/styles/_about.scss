@@ -2,6 +2,11 @@ main.about {
   .about-credits,
   .about-ip {
     margin-bottom: var(--s-lg1);
+
+    p {
+      text-align: justify;
+      text-indent: var(--f);
+    }
   }
 
   .about-credits {
@@ -12,10 +17,24 @@ main.about {
         font-size: var(--f-lg1);
         margin-bottom: var(--s-sl2);
       }
+
+      p {
+        text-align: center;
+      }
     }
 
     & > p:last-of-type {
       margin-bottom: var(--s-lg1);
+    }
+
+    a.button.primary {
+      margin-bottom: 0;
+    }
+  }
+
+  .about-ip {
+    p:last-of-type {
+      margin-bottom: 0;
     }
   }
 }

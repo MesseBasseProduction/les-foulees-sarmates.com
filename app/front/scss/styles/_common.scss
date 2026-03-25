@@ -195,11 +195,11 @@ main {
   }
 
   .race-cto {
-    margin-bottom: var(--s-lg1);
-  }
-
-  .race-countdown {
-    margin-bottom: var(--s-lg1);
+    a.button.primary {
+      border: solid 3px var(--c-bg);
+      font-size: var(--f-lg3);
+      padding: var(--s) var(--s-lg1);
+    }
   }
 }
 
@@ -207,6 +207,7 @@ footer {
   background-color: var(--c-bg);
   display: flex;
   flex-direction: column;
+  gap: var(--s-sl4);
   height: var(--nav-height);
   justify-content: center;
   width: 100vw;
@@ -233,10 +234,24 @@ footer {
     }    
   }
 
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: var(--s);
+
+    img {
+      height: var(--f-lg1);
+    }
+  }
+
   a {
     color: var(--c-fg);
     font-family: 'Catamaran' 'Gravity' sans-serif;
     font-size: var(--f-lg1);
     text-decoration: none;
+  }
+
+  p {
+    font-size: var(--f-sl1);
   }
 }

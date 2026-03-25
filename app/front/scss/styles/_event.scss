@@ -1,0 +1,19 @@
+main.info {
+  .organisation-info,
+  .charity-info {
+    text-align: justify;
+    text-indent: var(--f);
+  }
+
+  .organisation-info {
+    a.button.primary {
+      margin-bottom: 0;
+    }    
+  }
+
+  .charity-info {
+    p:last-of-type {
+      margin-bottom: 0;
+    }    
+  }
+}

@@ -23,7 +23,7 @@ main.home {
 
     h5 {
       font-size: var(--f-lg1);
-      margin-top: var(--s-lg2);
+      margin: var(--s-lg2) 0;
       text-indent: 0;
       text-align: center;
     }
@@ -43,8 +43,14 @@ main.home {
       }
     }
 
-    a.button {
-      margin-bottom: 0;
+    .button-container {
+      display: flex;
+      gap: var(--s);
+      justify-content: center;
+
+      a.button {
+        margin: 0;
+      }
     }
   }
 
