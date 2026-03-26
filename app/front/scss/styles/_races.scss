@@ -1,13 +1,52 @@
 main.races {
   .race-info {
-    .button {
-      margin-top: var(--s-lg1);
+    text-align: justify;
+    text-indent: var(--f);
 
-      &.race {
-        font-size: var(--f-lg1);
-        margin-bottom: var(--s-sl4);
-        margin-top: inherit;
+    .race {
+      font-size: var(--f-lg1);
+      margin-bottom: var(--s-sl4);
+      margin-top: inherit;
+      background-color: var(--c-bg);
+      margin-bottom: var(--s);
+      padding: var(--s) var(--s-lg1);
+      perspective: 1px; /* Avoid aliased border with skewed container */
+      text-align: center;
+      transform: skewX(-10deg);
+
+      &.race-21k {
+        border-bottom: solid var(--f-sl3) var(--race-21k-primary);      
       }
+
+      &.race-10k {
+        border-bottom: solid var(--f-sl3) var(--race-10k-primary);      
+      }
+
+      &.race-5k {
+        border-bottom: solid var(--f-sl3) var(--race-5k-primary);      
+      }
+
+      a {
+        color: var(--c-fg);
+        font-family: 'Fontjek', 'Gravity', sans-serif;
+        font-size: var(--f-lg3);
+        text-decoration: none;
+        transform: skew(10deg);
+      }
+
+      &:first-of-type {
+        margin-top: var(--s-lg1);
+      }
+      
+      &:last-of-type {
+        margin-bottom: var(--s-lg1);
+      }
+    }
+
+    a.button.primary {
+      margin-bottom: 0;
+      margin-top: var(--s-lg1);
+      text-align: center;
     }
   }
 }

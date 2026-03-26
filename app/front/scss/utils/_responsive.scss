@@ -1,4 +1,54 @@
+/* Tablet rules */
+@media (min-width: 500px) {
+  body {
+    footer {
+      .valley-cut-mask {
+        display: none !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 675px) {
+  body {
+    nav {
+      .valley-cut-mask {
+        display: none !important;
+      }
+    }
+
+    main {
+      .view-wrapper {
+        padding: var(--s-lg3);
+      }
+    }
+
+    .race-countdown {
+      margin-bottom: 0;
+    }
+
+    /* View specific rules */
+
+    main.home {
+      h1 {
+        max-width: inherit;
+      }
+
+      .village-picture {
+        border-radius: .5rem;
+        margin-left: 0;
+        width: 100%;
+      }
+
+      .race-partners {
+        overflow: hidden;
+      }
+    }
+  }
+}
+
 /* Desktop rules */
+
 @media (min-width: 1080px) {
   :root {
     --f-lg4: calc(var(--f) * 5);
@@ -69,7 +119,6 @@
         align-items: center;
         display: flex;
         flex-direction: column;
-        padding: var(--s-lg3);
         width: 100vw;
       }
     }
@@ -88,27 +137,16 @@
       padding: var(--s-lg2);
     }
 
-    .race-countdown {
-      margin-bottom: 0;
-    }
-
     /* View specific rules */
 
     main.home {
-      h1 {
-        max-width: inherit;
-      }
-
       h4 {
         margin-bottom: var(--s-lg2);
       }
 
       .village-picture {
-        border-radius: .5rem;
         margin-bottom: var(--s-lg2);
-        margin-left: 0;
         max-width: 75%;
-        width: 100%;
 
         & + h3 {
           margin-bottom: var(--s-lg2); 
@@ -124,7 +162,6 @@
       .race-partners {
         margin-bottom: var(--s-lg2);
         max-width: 75%;
-        overflow-x: hidden;
       }
     }
 
