@@ -1,9 +1,11 @@
 main.not-found {
   .not-found-info {
-    margin-bottom: var(--s-lg1);
-
     p:first-of-type {
-      margin-bottom: var(--s-lg1);    
+      margin-bottom: var(--s-lg1);
+    }
+
+    h3:last-of-type {
+      margin-bottom: 0;
     }
   }
 }

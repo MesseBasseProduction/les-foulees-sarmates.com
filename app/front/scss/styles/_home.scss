@@ -3,29 +3,48 @@ main.home {
     max-width: 300px;
   }
 
-  .race-info,
-  .race-more-info,
+  .village-picture,
   .race-partners {
     margin-bottom: var(--s-lg1);
   }
 
-  .race-info {
+  .village-picture {
     aspect-ratio: 16 / 9;
-    background: linear-gradient(0deg, var(--c-bg-a80)), url('/assets/img/sermaise-drone.webp');
+    background: url('/assets/img/photo/sermaise-drone.webp');
     background-position: center;
     background-size: cover;
+    box-shadow: 0 0 var(--f) var(--c-fg-a20);
     margin-left: calc(var(--s-lg1) * -1);
-    mask-image: linear-gradient(0deg, transparent, rgba(0, 0, 0, 1) 8% 92%, transparent);
-    padding: var(--s-lg4) var(--s-lg1);
+    position: relative;
+    width: 100vw;
+
+    label {
+      background-color: var(--c-bg);
+      border: solid 1px var(--c-fg-a30);
+      border-radius: .5rem;
+      bottom: var(--s-sl2);
+      font-size: var(--f-sl1);
+      font-weight: bold;
+      left: 50%;
+      padding: var(--s-sl4) var(--s-sl2);
+      position: absolute;
+      transform: translateX(-50%);
+    }
+  }
+
+  .race-info {
     text-align: justify;
     text-indent: var(--f);
-    width: 100vw;
 
     h5 {
       font-size: var(--f-lg1);
       margin: var(--s-lg2) 0;
       text-indent: 0;
       text-align: center;
+    }
+
+    a.button.primary {
+      margin-bottom: 0;
     }
   }
 

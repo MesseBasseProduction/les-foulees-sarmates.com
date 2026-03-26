@@ -1,8 +1,8 @@
 @use 'utils/variables';
 @use 'utils/keyframes';
 @use 'utils/base';
-@use 'styles/common';
 
+@use 'styles/common';
 @use 'styles/home';
 @use 'styles/event';
 @use 'styles/races';
@@ -11,3 +11,5 @@
 @use 'styles/volunteer';
 @use 'styles/about';
 @use 'styles/notfound';
+
+@use 'utils/responsive';

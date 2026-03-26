@@ -1,17 +1,21 @@
 {{> nav}}
-<main id="scene" class="race-details">
+<main id="scene" class="race-details" data-nav="races">
   <div class="view-wrapper">
-    <h1>Les 10k de la Plaine</h1>
+    <div class="race-title race-10k">
+      <a href="/5k" class="previous" alt="Lien de navigation interne vers la page de la course Les 5k de la Plaine">〈</a>
+      <h1>Les 10k de la Plaine</h1>
+      <a href="/21k" class="next" alt="Lien de navigation interne vers la page de la course Le Semi des Hameaux">〉</a>
+    </div>
     <h3>Une course dynamique et accessible au tracé mi-sentier, mi-route, adapté aux coureurs intermédiaires ou confirmés et parfait pour allier performance et plaisir.</h3>
     <div class="race-essential-infos card">
       <ul>
         <li class="primary">17 Octobre 2026</li>
-        <li><img src="/assets/img/icon/flags.svg" alt=""> <b>Heure de départ :</b> 9h15</li>
-        <li><img src="/assets/img/icon/path.svg" alt=""> <b>Distance :</b> 10,07 km</li>
-        <li><img src="/assets/img/icon/climb.svg" alt=""> <b>D+ :</b> 113 m</li>
-        <li><img src="/assets/img/icon/town.svg" alt=""> <b>Hameaux traversés :</b> 5</li>
-        <li><img src="/assets/img/icon/stopwatch.svg" alt=""> <b>Temps limite :</b> 2h</li>
-        <li><img src="/assets/img/icon/runner.svg" alt=""> <b>Participants :</b> 100 max</li>
+        <li><img src="/assets/img/icon/flags.svg" alt="Icône de drapeau représentant l'heure de départ"><b>Heure de départ :</b>9h15</li>
+        <li><img src="/assets/img/icon/path.svg" alt="Icône de chemin représentant la distance"><b>Distance :</b>10,07 km</li>
+        <li><img src="/assets/img/icon/climb.svg" alt="Icône d'ascension représentant le dénivelé positif"><b>D+ :</b>113 m</li>
+        <li><img src="/assets/img/icon/town.svg" alt="Icône de village représentant les hameaux traversés"><b>Hameaux traversés :</b>5</li>
+        <li><img src="/assets/img/icon/stopwatch.svg" alt="Icône de chronomètre représentant la barrière horaire"><b>Temps limite :</b>2h</li>
+        <li><img src="/assets/img/icon/runner.svg" alt="Icône de coureur représentant le nombre de participants"><b>Participants :</b>100 max</li>
         <div class="race-topology">
           <img src="/assets/img/topology/10k-profile.webp" id="topology-image" alt="Profil topologique des 10k de la Plaine">
           <label id="topology-label"><b>Topologie de la course</b><br><i>Départ à gauche, arrivée à droite</i></label>
@@ -21,7 +25,7 @@
             <a data-type="surface" data-label="<b>Surfaces de la course</b><br><i>Bleu : Route, Vert : Sentier</i>" data-image="/assets/img/topology/10k-surface.webp">Surface</a>
           </div>
         </div>
-        <a href="/assets/gpx/LFS26-10km-v4.gpx" download="LFS26 - Les 10k de la Plaine.gpx"><li class="list-cto">Télécharger la trace GPX</li></a>
+        <a href="/assets/gpx/LFS26-10km-v4.gpx" download="LFS26 - Les 10k de la Plaine.gpx" alt="Lien de téléchargement pour la trace GPX de la course Les 10k de la Plaine"><li class="list-cto">Télécharger la trace GPX</li></a>
       </ul>
     </div>
     <div class="race-description card">
@@ -29,7 +33,7 @@
       <p>Envie d'une aventure sportive et engagée ? Les 10 km de la Plaine, épreuve des <i>Foulées Sarmates</i>, vous offre un parcours dynamique, à travers les paysages préservés de Sermaise. Entre hameaux pittoresques, mares et plaines verdoyantes, laissez-vous emporter par l'énergie de notre village et l'esprit convivial de cette course nature.</p>
       <p>Traversez la vallée de l'Orge et ses alentours, sur un tracé mi-sentier, mi-route, idéal pour les coureurs en quête de performance ou de plaisir. Découvrez les écarts et lieux-dits qui font le charme de Sermaise, dans une ambiance chaleureuse et solidaire.</p>
       <p>En participant à cette course, vous soutenez directement la lutte contre le cancer du sein. 50 % des bénéfices seront reversés à la Ligue contre le cancer, dans le cadre d'Octobre Rose. Courir pour le plaisir, courir pour la santé, courir pour une cause qui nous touche tous.</p>
-      <a href="https://chronometrage.com/events/lesfouleessarmates" target="_blank" rel="noopener noreferrer" class="button primary" alt="Lien de navigation externe vers l'inscription en ligne sur chronometrage.com">S'inscrire</a>
+      <a href="https://chronometrage.com/events/lesfouleessarmates" target="_blank" rel="noopener noreferrer" class="button primary" alt="Lien de navigation externe vers l'inscription en ligne sur chronometrage.com">Prendre un dossard</a>
     </div>
     <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="3471585021038940810" data-units="metric" data-full-width="true" data-style="standard" data-surface-type="true" data-map-hash="12.36/48.5291/2.08651" data-club-id="1870907" data-from-embed="true"></div><script src="https://strava-embeds.com/embed.js"></script>
     {{> countdown}}

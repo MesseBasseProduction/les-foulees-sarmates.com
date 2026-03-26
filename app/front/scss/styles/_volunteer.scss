@@ -3,6 +3,10 @@ main.volunteer {
     text-align: justify;
     text-indent: var(--f);
 
+    p:last-of-type {
+      margin-bottom: var(--s-lg1);      
+    }
+
     h3 {
       margin-bottom: var(--s-lg1);
       text-align: center;

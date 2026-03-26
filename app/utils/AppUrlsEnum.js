@@ -22,12 +22,13 @@ module.exports = Object.freeze([
       '/info'
     ]
   }, {
-    mainUrl: '/courses',
+    mainUrl: '/epreuves',
     rootUrls: [
-      '/courses'
+      '/epreuves'
     ],
     redirectionTarget: 'races',
     redirectUrls: [
+      '/courses',
       '/course'
     ]
   }, {

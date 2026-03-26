@@ -1,17 +1,20 @@
 {{> nav}}
-<main id="scene" class="race-details">
+<main id="scene" class="race-details" data-nav="races">
   <div class="view-wrapper">
-    <h1>Le Semi des Hameaux</h1>
+    <div class="race-title race-21k">
+      <a href="/10k" class="previous" alt="Lien de navigation interne vers la page de la course Les 10k de la Plaine">〈</a>
+      <h1>Le Semi des Hameaux</h1>
+    </div>
     <h3>Une course à travers 21 km de paysages préservés, au parcours technique et varié entre sentiers ombragés et chemins de campagne, pour découvrir l'âme authentique de Sermaise.</h3>
     <div class="race-essential-infos card">
       <ul>
         <li class="primary">17 Octobre 2026</li>
-        <li><img src="/assets/img/icon/flags.svg" alt=""> <b>Heure de départ :</b> 9h00</li>
-        <li><img src="/assets/img/icon/path.svg" alt=""> <b>Distance :</b> 21,02 km</li>
-        <li><img src="/assets/img/icon/climb.svg" alt=""> <b>D+ :</b> 260 m</li>
-        <li><img src="/assets/img/icon/town.svg" alt=""> <b>Hameaux traversés :</b> 7</li>
-        <li><img src="/assets/img/icon/stopwatch.svg" alt=""> <b>Temps limite :</b> 3h30</li>
-        <li><img src="/assets/img/icon/runner.svg" alt=""> <b>Participants :</b> 100 max</li>
+        <li><img src="/assets/img/icon/flags.svg" alt="Icône de drapeau représentant l'heure de départ"><b>Heure de départ :</b>9h00</li>
+        <li><img src="/assets/img/icon/path.svg" alt="Icône de chemin représentant la distance"><b>Distance :</b>21,02 km</li>
+        <li><img src="/assets/img/icon/climb.svg" alt="Icône d'ascension représentant le dénivelé positif"><b>D+ :</b>260 m</li>
+        <li><img src="/assets/img/icon/town.svg" alt="Icône de village représentant les hameaux traversés"><b>Hameaux traversés :</b>7 (tous)</li>
+        <li><img src="/assets/img/icon/stopwatch.svg" alt="Icône de chronomètre représentant la barrière horaire"><b>Temps limite :</b>3h30</li>
+        <li><img src="/assets/img/icon/runner.svg" alt="Icône de coureur représentant le nombre de participants"><b>Participants :</b>100 max</li>
         <div class="race-topology">
           <img src="/assets/img/topology/21k-profile.webp" id="topology-image" alt="Profil topologique du Semi des Hameaux">
           <label id="topology-label"><b>Topologie de la course</b><br><i>Départ à gauche, arrivée à droite</i></label>
@@ -21,7 +24,7 @@
             <a data-type="surface" data-label="<b>Surfaces de la course</b><br><i>Bleu : Route, Vert : Sentier</i>" data-image="/assets/img/topology/21k-surface.webp">Surface</a>
           </div>
         </div>
-        <a href="/assets/gpx/LFS26-21km-v4.gpx" download="LFS26 - Le Semi des Hameaux.gpx"><li class="list-cto">Télécharger la trace GPX</li></a>
+        <a href="/assets/gpx/LFS26-21km-v4.gpx" download="LFS26 - Le Semi des Hameaux.gpx" alt="Lien de téléchargement pour la trace GPX de la course Le Semi des Hameaux"><li class="list-cto">Télécharger la trace GPX</li></a>
       </ul>
     </div>
     <div class="race-description card">
@@ -29,7 +32,7 @@
       <p>Prêt à vivre une expérience unique ? Le Semi des Hameaux, épreuve des <i>Foulées Sarmates</i>, vous invite à parcourir 21 km de paysages préservés, entre hameaux pittoresques, lieux-dits, mares et vallons verdoyants. Laissez-vous porter par le souffle de Sermaise, où chaque foulée vous rapproche de l'âme authentique de notre village.</p>
       <p>Traversez la vallée de l'Orge et ses plaines environnantes, entre sentiers ombragés, forêts et chemins de campagne. Parcourez tous nos hameaux et découvrez les écarts et lieux-dits qui font le charme de Sermaise, dans une ambiance conviviale et engagée.</p>
       <p>En participant à cette course, vous soutenez directement la lutte contre le cancer du sein. 50 % des bénéfices seront reversés à la Ligue contre le cancer, dans le cadre d'Octobre Rose. Courir pour le plaisir, courir pour la santé, courir pour une cause qui nous touche tous.</p>
-      <a href="https://chronometrage.com/events/lesfouleessarmates" target="_blank" rel="noopener noreferrer" class="button primary" alt="Lien de navigation externe vers l'inscription en ligne sur chronometrage.com">S'inscrire</a>
+      <a href="https://chronometrage.com/events/lesfouleessarmates" target="_blank" rel="noopener noreferrer" class="button primary" alt="Lien de navigation externe vers l'inscription en ligne sur chronometrage.com">Prendre un dossard</a>
     </div>
     <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="3471575451017422040" data-units="metric" data-full-width="true" data-style="standard" data-surface-type="true" data-map-hash="11.64/48.5297/2.09" data-club-id="1870907" data-from-embed="true"></div><script src="https://strava-embeds.com/embed.js"></script>
     {{> countdown}}

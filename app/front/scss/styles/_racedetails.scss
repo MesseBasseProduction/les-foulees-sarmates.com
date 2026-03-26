@@ -1,4 +1,49 @@
 main.race-details {
+  .race-title {
+    background-color: var(--c-bg);
+    margin: 0 auto;
+    margin-bottom: var(--s-lg1);
+    padding: var(--s);
+    perspective: 1px; /* Avoid aliased border with skewed container */
+    transform: skewX(-10deg);
+    width: 90%;
+
+    &.race-21k {
+      border-bottom: solid var(--f-sl3) var(--race-21k-primary);      
+    }
+
+    &.race-10k {
+      border-bottom: solid var(--f-sl3) var(--race-10k-primary);      
+    }
+
+    &.race-5k {
+      border-bottom: solid var(--f-sl3) var(--race-5k-primary);      
+    }
+
+    h1 {
+      margin-bottom: 0;
+      transform: skew(10deg);
+    }
+
+    a {
+      color: var(--c-fg);
+      font-size: var(--f-lg2);
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) skew(10deg);
+      text-decoration: none;      
+
+      &.previous {
+        left: -10%;
+      }
+      
+      &.next {
+        right: -10%;
+      }
+    }
+  }
+
   .race-essential-infos {
     padding: 0;
 
@@ -28,6 +73,7 @@ main.race-details {
         }
 
         &.list-cto {
+          border: 1px solid var(--c-bg);
           font-size: var(--f);
           margin-bottom: 0;
           margin-top: var(--s-lg1);
@@ -80,7 +126,6 @@ main.race-details {
   }
 
   .race-description {
-    background-color: var(--c-bg-a80);
     text-align: justify;
     text-indent: var(--f);
 

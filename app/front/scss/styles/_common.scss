@@ -13,6 +13,10 @@ nav {
   z-index: 3;
   filter: drop-shadow(1px 1px 4px var(--c-fg-a80));
 
+  .desktop {
+    display: none !important;
+  }
+
   a.page-title {
     color: var(--c-fg);
     display: inline-block;

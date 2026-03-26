@@ -37,16 +37,26 @@ html, body {
 }
 
 body {
-  background: url('/assets/img/topology/sermaise.webp'), linear-gradient(115deg, var(--c-grad-start) 20%, var(--c-grad-end) 120%);
-  background-position: center;
-  background-size: contain;
+  background: linear-gradient(115deg, var(--c-grad-start) 20%, var(--c-grad-end) 120%);
   color: var(--c-fg);
   font-size: var(--f);
   font-family: 'Gravity', sans-serif;
+  position: relative;
   text-align: center;
 
-  .desktop {
-    display: none !important;
+  &::before {
+    content: '';
+    background: url('/assets/img/topology/sermaise.webp');
+    background-position: center;
+    background-size: contain;
+    height: 100%;
+    left: 0;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    filter: drop-shadow(0 0 var(--s-sl4) var(--c-fg-a80));
   }
 }
 
@@ -61,6 +71,7 @@ hr {
 }
 
 a.button {
+  align-items: center;
   background: var(--c-bg);
   border: solid 1px var(--c-fg-a20);
   border-radius: var(--s-sl1);
@@ -69,10 +80,12 @@ a.button {
   display: flex;
   font-size: var(--f-lg1);
   font-weight: bold;
+  justify-content: center;
   margin: 0 auto;
   margin-bottom: var(--s-lg1);
   padding: var(--s-sl1) var(--s);
   text-decoration: none;
+  text-indent: 0;
   text-transform: uppercase;
   width: fit-content;
 

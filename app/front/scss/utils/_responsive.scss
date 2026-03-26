@@ -1,0 +1,274 @@
+/* Desktop rules */
+@media (min-width: 1080px) {
+  :root {
+    --f-lg4: calc(var(--f) * 5);
+
+    --nav-height: 7vh;
+  }
+
+  body {
+    &::before {
+      background-size: cover;
+      opacity: .15;
+    }
+
+    nav {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+
+      .responsive,
+      .valley-cut-mask {
+        display: none !important;
+      }
+
+      .desktop {
+        display: inherit !important;
+      }
+
+      a.page-title {
+        padding: var(--s);
+
+        img {
+          margin-left: 0;
+        }
+      }
+
+      .nav-menu {
+        flex-direction: row;
+        height: 100%;
+        list-style-type: none;
+        padding-right: var(--s);
+        position: inherit;
+        right: 0;
+        top: 0;
+        width: auto;
+
+        li {
+          align-items: center;
+          border-bottom: solid 3px transparent;
+          display: flex;
+          height: 100%;
+          padding: 0 var(--s);
+          text-transform: uppercase;
+
+          &.selected {
+            border-bottom: solid 3px var(--c-primary);
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+
+      .view-wrapper {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: var(--s-lg3);
+        width: 100vw;
+      }
+    }
+
+    footer {
+      height: 10vh; /* Leave to default responsive height */
+
+      .valley-cut-mask {
+        display: none;
+      }
+    }
+
+    .card {
+      max-width: 50%;
+      margin-bottom: var(--s-lg2);
+      padding: var(--s-lg2);
+    }
+
+    .race-countdown {
+      margin-bottom: 0;
+    }
+
+    /* View specific rules */
+
+    main.home {
+      h1 {
+        max-width: inherit;
+      }
+
+      h4 {
+        margin-bottom: var(--s-lg2);
+      }
+
+      .village-picture {
+        border-radius: .5rem;
+        margin-bottom: var(--s-lg2);
+        margin-left: 0;
+        max-width: 75%;
+        width: 100%;
+
+        & + h3 {
+          margin-bottom: var(--s-lg2); 
+        }
+      }
+
+      .race-more-info {
+        & + h3 {
+          margin-bottom: var(--s-lg2); 
+        }
+      }
+
+      .race-partners {
+        margin-bottom: var(--s-lg2);
+        max-width: 75%;
+        overflow-x: hidden;
+      }
+    }
+
+    main.race-details {
+      h3 {
+        margin-bottom: var(--s-lg2);
+      }
+
+      .race-title {
+        margin-bottom: var(--s-lg2);
+        width: 64%;
+
+        a {
+          font-size: var(--f-lg3);
+
+          &.previous {
+            left: -32%;
+          }
+
+          &.next {
+            right: -32%;
+          }
+        }
+      }
+
+      .race-essential-infos {
+        ul {
+          padding: var(--s-lg2);
+
+          .race-topology {
+            margin: var(--s-lg2) 0;
+
+            .topology-selector a {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      iframe {
+        margin-bottom: var(--s-lg2);
+        width: 75% !important;
+      }
+    }
+
+    main.faq {
+      h1 {
+        margin-bottom: var(--s-lg2);
+      }
+
+      .frequent-questions {
+        h3 {
+          font-size: var(--f-lg3);
+          margin-bottom: var(--s-lg2);
+          padding-top: var(--s-lg2);
+        }
+
+        .question {
+          padding: var(--s) var(--s-lg2);
+
+          &::after {
+            right: var(--s-lg2);
+          }
+        }
+
+        .answer {
+          p {
+            padding: var(--s) var(--s-lg2);
+
+            &:first-of-type {
+              padding-top: var(--s-lg1);
+            }
+
+            &:last-of-type {
+              padding-bottom: var(--s-lg1);
+            }
+          }
+        }
+      }
+    }
+
+    main.volunteer {
+      h1,
+      h3 {
+        margin-bottom: var(--s-lg2);
+      }
+
+      .become-volunteer {
+        p:last-of-type {
+          margin-bottom: var(--s-lg2);      
+        }
+
+        h3 {
+          margin-bottom: var(--s-lg2);
+        }        
+      }
+    }
+
+    main.about {
+      h1 {
+        margin-bottom: var(--s-lg2);
+      }
+
+      .about-credits {
+        div {
+          margin-bottom: var(--s-lg2);
+        }
+      }
+    }
+
+    main.not-found {
+      h1,
+      h3 {
+        margin-bottom: var(--s-lg2);
+      }
+
+        .not-found-info {
+          p:first-of-type {
+            margin-bottom: var(--s-lg2);
+          }
+        }
+    }
+  }
+}
+
+@media (min-width: 1350px) {
+  body {
+    .card {
+      max-width: 700px;
+    }
+
+    /* View specific rules */
+
+    main.home {
+      .village-picture,
+      .race-partners {
+        max-width: min(75%, 1080px);
+      }
+    }
+
+    main.race-details {
+      iframe {
+        width: min(75%, 1080px) !important;
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@ class LFS {
 
 
   constructor() {
+    this._updateNav();
     this._handleCountDown();
     this._handlePageScroll();
 
@@ -14,6 +15,20 @@ class LFS {
       this._handleFaq();
     } else if (document.querySelector('#scene.volunteer')) {
       this._handleBecomeVolunteer();
+    }
+  }
+
+
+  _updateNav() {
+    const type = document.querySelector('#scene').dataset.nav;
+    if (type) {
+      const navChildren = document.querySelector('#nav-menu').children;
+      for (let i = 0; navChildren.length; ++i) {
+        if (navChildren[i].dataset.nav === type) {
+          navChildren[i].classList.add('selected');
+          break;
+        }
+      }
     }
   }
 
