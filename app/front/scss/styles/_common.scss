@@ -5,13 +5,13 @@
 
 nav {
   background-color: var(--c-bg);
+  filter: drop-shadow(1px 1px 4px var(--c-fg-a80));
   height: var(--nav-height);
   padding: var(--s);
   position: relative;
   text-align: initial;
   width: 100vw;
   z-index: 3;
-  filter: drop-shadow(1px 1px 4px var(--c-fg-a80));
 
   .desktop {
     display: none !important;
@@ -61,7 +61,7 @@ nav {
       top: 0;
       width: var(--s-lg2);
       z-index: 5; /* Invisible checkbox above everything here */
-      
+
       &:checked ~ span {
         opacity: 1;
         transform: rotate(45deg) translate(-2px, -1px);
@@ -90,8 +90,8 @@ nav {
       position: relative;
       width: var(--s-lg2);
       z-index: 4;
-      
-      transform-origin: 4px 0px;      
+
+      transform-origin: 4px 0px;
       transition: transform var(--t-duration) cubic-bezier(0.77, 0.2, 0.05, 1.0),
         opacity var(--t-duration) ease;
 
@@ -155,7 +155,7 @@ nav {
       position: absolute;
       top: 0;
       width: 100%;
-    }    
+    }
   }
 }
 
@@ -235,7 +235,7 @@ footer {
       position: absolute;
       bottom: var(--nav-height);
       width: 100%;
-    }    
+    }
   }
 
   .socials {

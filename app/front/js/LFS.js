@@ -11,6 +11,7 @@ class LFS {
 
     if (document.querySelector('#scene.race-details')) {
       this._handleTopologySelector();
+      this._handleImageSlideshow();
     } else if (document.querySelector('#scene.faq')) {
       this._handleFaq();
     } else if (document.querySelector('#scene.volunteer')) {
@@ -77,6 +78,103 @@ class LFS {
   }
 
 
+  _handleImageSlideshow() {
+    const slideshow = document.querySelector('#slideshow').dataset.hamlets.split('/');
+    const titles = {
+      charpenterie: 'La Charpenterie',
+      mesnil: 'Le Mesnil',
+      blancheface: 'Blancheface',
+      montflix: 'Monftlix',
+      mondetour: 'Mondétour',
+      bellanger: 'Bellanger',
+      bourg: 'Le Bourg'
+    };
+    let idx = 0;
+    let intervalId = -1;
+    let backIdx = 1;
+    const indicators = document.querySelector('#item-indicators');
+    // Change slideshow image each 7 seconds
+    const animateSlideshow = () => {
+      intervalId = setInterval(() => {
+        idx = (idx + 1) % slideshow.length;
+        updateSlideshow();
+      }, 7000);
+    };
+    // idx has been updated, update/animate image the restart slideshow animation
+    const updateSlideshow = () => {
+      if (backIdx === 0) {
+        document.querySelector('#slideshow-0').src = `/assets/img/photo/${slideshow[idx]}-drone.webp`;
+        document.querySelector('#slideshow-0').style.opacity = 1;
+        document.querySelector('#slideshow-1').style.opacity = 0;
+        backIdx = 1;
+      } else {
+        document.querySelector('#slideshow-1').src = `/assets/img/photo/${slideshow[idx]}-drone.webp`;
+        document.querySelector('#slideshow-0').style.opacity = 0;
+        document.querySelector('#slideshow-1').style.opacity = 1;
+        backIdx = 0;
+      }
+      document.querySelector('#slideshow-label').innerHTML = titles[slideshow[idx]];
+      updateIndicators();
+    };
+    // Update indicators selected item
+    const updateIndicators = () => {
+      for (let i = 0; i < indicators.children.length; ++i) {
+        indicators.children[i].classList.remove('selected');
+        if (i === idx) {
+          indicators.children[i].classList.add('selected');
+        }
+      }
+
+    };
+    // Build item indicator
+    for (let i = 0; i < slideshow.length; ++i) {
+      const item = document.createElement('DIV');
+      item.classList.add('item-indicator');
+      document.querySelector('#item-indicators').appendChild(item);
+      if (i === 0) {
+        item.classList.add('selected');
+      }
+      item.addEventListener('click', () => {
+        idx = i;
+        updateSlideshow();
+      });
+    }
+
+    // Start slideshow animation
+    updateSlideshow();
+    animateSlideshow();
+
+    // Slideshow back button
+    document.querySelector('#back-image').addEventListener('click', () => {
+      idx = (idx - 1 + slideshow.length) % slideshow.length;
+      updateSlideshow();
+    });
+    // Slideshow next button
+    document.querySelector('#next-image').addEventListener('click', () => {
+      idx = (idx + 1) % slideshow.length;
+      updateSlideshow();
+    });
+    // Stop animation when mouse is over slideshow
+    document.querySelector('#slideshow').addEventListener('mouseenter', () => {
+      clearInterval(intervalId);
+    });
+    // Restart animation when mouse leave slideshow
+    document.querySelector('#slideshow').addEventListener('mouseleave', () => {
+      clearInterval(intervalId);
+      animateSlideshow();
+    });
+    // Next image on click for both slideshow images
+    document.querySelector('#slideshow-0').addEventListener('click', () => {
+      idx = (idx + 1) % slideshow.length;
+      updateSlideshow();
+    });
+    document.querySelector('#slideshow-1').addEventListener('click', () => {
+      idx = (idx + 1) % slideshow.length;
+      updateSlideshow();
+    });
+  }
+
+
   _handleFaq() {
     const questionClicked = function() {
       const answer = this.nextElementSibling;
@@ -86,13 +184,13 @@ class LFS {
       } else {
         this.classList.add('active');
         answer.style.maxHeight = `${answer.scrollHeight}px`;
-      } 
+      }
     };
 
     const questions = document.querySelectorAll('.question');
     for (let i = 0; i < questions.length; ++i) {
       questions[i].addEventListener('click', questionClicked);
-    } 
+    }
   }
 
 

@@ -53,7 +53,7 @@
   :root {
     --f-lg4: calc(var(--f) * 5);
 
-    --nav-height: 7vh;
+    --nav-height: 7rem;
   }
 
   body {
@@ -89,7 +89,6 @@
         flex-direction: row;
         height: 100%;
         list-style-type: none;
-        padding-right: var(--s);
         position: inherit;
         right: 0;
         top: 0;
@@ -106,6 +105,16 @@
           &.selected {
             border-bottom: solid 3px var(--c-primary);
             font-weight: bold;
+          }
+
+          &.primary {
+            background-color: var(--c-primary);
+            font-weight: bold;
+            padding-right: calc(var(--s) * 2);
+
+            a {
+              color: var(--c-bg);
+            }
           }
         }
       }
@@ -199,6 +208,11 @@
             }
           }
         }
+      }
+
+      .race-hamlet-crossed {
+        margin-bottom: var(--s-lg2);
+        max-width: 75%;
       }
 
       iframe {
@@ -303,6 +317,7 @@
     }
 
     main.race-details {
+      .race-hamlet-crossed,
       iframe {
         width: min(75%, 1080px) !important;
       }

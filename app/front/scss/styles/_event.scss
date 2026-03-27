@@ -6,14 +6,77 @@ main.event {
   }
 
   .organisation-info {
+    ul {
+      list-style: none;
+      margin-bottom: var(--s-lg1);
+
+      li {
+        background-color: var(--c-bg-a80);
+        border-radius: .5rem;
+        display: grid;
+        font-size: var(--f);
+        grid-template-columns: 8rem 3fr;
+        grid-gap: var(--s);
+        margin-bottom: var(--s-sl4);
+        padding: var(--s-sl2) var(--s-lg2);
+        text-indent: 0;
+
+        b {
+          text-align: right;
+        }
+
+        span {
+          text-align: left;
+        }
+      }
+    }
+
     a.button.primary {
-      margin-bottom: 0;
-    }    
+      margin-top: var(--s-lg1);
+    }
+
+    .catering-partners {
+      display: flex;
+      gap: var(--s);
+      justify-content: center;
+      margin: var(--s-lg1);
+
+      .item {
+        align-items: center;
+        background-color: var(--c-bg-a80);
+        border-radius: var(--f);
+        box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0;
+        padding: var(--s-sl2) var(--s);
+        justify-content: center;
+        text-indent: 0;
+        width: 33%;
+
+        img {
+          height: 100%;
+          max-width: 100%;
+          object-fit: contain;
+          width: auto;
+        }
+      }
+    }
   }
 
   .charity-info {
     p:last-of-type {
       margin-bottom: 0;
-    }    
+    }
+
+    .lclc-container {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin-top: var(--s-lg1);
+      text-indent: 0;
+
+      img {
+        max-height: 10rem;
+        max-width: 100%;
+      }
+    }
   }
 }

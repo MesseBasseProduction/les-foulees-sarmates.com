@@ -10,7 +10,7 @@ main.home {
 
   .village-picture {
     aspect-ratio: 16 / 9;
-    background: url('/assets/img/photo/sermaise-drone.webp');
+    background: url('/assets/img/photo/bourg-drone.webp');
     background-position: center;
     background-size: cover;
     box-shadow: 0 0 var(--f) var(--c-fg-a20);
@@ -97,12 +97,12 @@ main.home {
         animation: carousel-horizontal-scroll 20s linear infinite;
   
         .item {
+          align-items: center;
           background-color: var(--c-bg-a80);
           border-radius: var(--f);
           box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0;
           padding: var(--s-sl2) var(--s);
           justify-content: center;
-          align-items: center;
           width: 20rem;
   
           img {
