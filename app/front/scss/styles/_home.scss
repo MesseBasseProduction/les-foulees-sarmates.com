@@ -13,7 +13,7 @@ main.home {
     background: url('/assets/img/photo/bourg-drone.webp');
     background-position: center;
     background-size: cover;
-    box-shadow: 0 0 var(--f) var(--c-fg-a20);
+    filter: drop-shadow(0 0 var(--s-sl4) var(--c-fg-a50));
     margin-left: calc(var(--s-lg1) * -1);
     position: relative;
     width: 100vw;

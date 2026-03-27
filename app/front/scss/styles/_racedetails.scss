@@ -249,6 +249,7 @@ main.race-details {
 
   iframe {
     border-radius: .5rem;
+    filter: drop-shadow(0 0 var(--s-sl4) var(--c-fg-a50));
     margin-bottom: var(--s-lg1);
   }
 }

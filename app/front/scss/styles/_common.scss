@@ -149,7 +149,7 @@ nav {
       display: block;
       background-color: var(--c-bg);
       left: 0;
-      mask-image: url('/assets/img/valley-cut.svg');
+      mask-image: url('/assets/img/topology/valley-cut.svg');
       mask-repeat: no-repeat;
       mask-size: cover;
       position: absolute;
@@ -229,7 +229,7 @@ footer {
       transform: rotate(180deg) translateY(-1px); /* For some reason, rotate offsets by 1px ... */
 
       left: 0;
-      mask-image: url('/assets/img/valley-cut.svg');
+      mask-image: url('/assets/img/topology/valley-cut.svg');
       mask-repeat: no-repeat;
       mask-size: cover;
       position: absolute;
