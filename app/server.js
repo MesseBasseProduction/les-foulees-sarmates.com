@@ -1,5 +1,5 @@
 global['url'] = 'les-foulees-sarmates.com'; // Ensure no slash at the end
-global['version'] = '0.1.1';
+global['version'] = '1.0.0';
 global['port'] = 8080;
 
 console.log(`${(new Date()).toISOString()} | ${global['url']} v${global['version']} | Starting frontend web server`);
@@ -25,8 +25,9 @@ app.set('views',  path.resolve(__dirname, './views'));
 
 // URL definitions and routing
 const appRoutes = require('./route/AppRoutes');
-const hiddenRoutes = require('./route/HiddenRoutes');
 app.use('/', appRoutes);
+
+//const hiddenRoutes = require('./route/HiddenRoutes');
 //app.use('/finishers/', hiddenRoutes); /* Will be used, someday but not now ! */
 
 app.use('/assets', express.static(path.join(__dirname, '../assets'), { // Serve static files

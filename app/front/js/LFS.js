@@ -1,10 +1,13 @@
 import '../scss/lfs.scss';
 import Countdown from './utils/Countdown';
 
+
 class LFS {
 
 
   constructor() {
+    this._version = '1.0.0';
+
     this._updateNav();
     this._handleCountDown();
     this._handlePageScroll();

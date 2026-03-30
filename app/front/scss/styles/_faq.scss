@@ -50,5 +50,12 @@ main.faq {
         padding: var(--s) var(--s-lg1);
       }
     }
+
+    p {
+      margin-bottom: var(--s-lg2);
+      padding: 0 var(--s-lg1);
+      text-align: justify;
+      text-indent: var(--f);
+    }
   }
 }
