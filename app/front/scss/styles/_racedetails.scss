@@ -9,15 +9,15 @@ main.race-details {
     width: 90%;
 
     &.race-21k {
-      border-bottom: solid var(--f-sl3) var(--race-21k-primary);      
+      border-bottom: solid var(--f-sl3) var(--race-21k-primary);
     }
 
     &.race-10k {
-      border-bottom: solid var(--f-sl3) var(--race-10k-primary);      
+      border-bottom: solid var(--f-sl3) var(--race-10k-primary);
     }
 
     &.race-5k {
-      border-bottom: solid var(--f-sl3) var(--race-5k-primary);      
+      border-bottom: solid var(--f-sl3) var(--race-5k-primary);
     }
 
     h1 {
@@ -32,12 +32,12 @@ main.race-details {
       position: absolute;
       top: 50%;
       transform: translateY(-50%) skew(10deg);
-      text-decoration: none;      
+      text-decoration: none;
 
       &.previous {
         left: -10%;
       }
-      
+
       &.next {
         right: -10%;
       }
@@ -88,7 +88,7 @@ main.race-details {
 
     .race-topology {
       display: flex;
-      flex-direction: column;    
+      flex-direction: column;
       margin: var(--s-lg1) 0;
 
       img {

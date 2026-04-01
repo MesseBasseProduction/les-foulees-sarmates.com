@@ -3,6 +3,41 @@ main.home {
     max-width: 300px;
   }
 
+  h4 {
+    display: flex;
+    gap: var(--s);
+    justify-content: center;
+    margin-bottom: var(--s-lg1);
+
+    a {
+      background-color: var(--c-bg);
+      padding: var(--s);
+      perspective: 1px; /* Avoid aliased border with skewed container */
+      text-decoration: none;
+      transform: skewX(-10deg);
+
+      &.race-21k {
+        border-bottom: solid var(--f-sl3) var(--race-21k-primary);
+      }
+
+      &.race-10k {
+        border-bottom: solid var(--f-sl3) var(--race-10k-primary);
+      }
+
+      &.race-5k {
+        border-bottom: solid var(--f-sl3) var(--race-5k-primary);
+      }
+
+      span {
+        color: var(--c-fg);
+        font-family: 'Fontjek', 'Gravity', sans-serif;
+        font-size: var(--f-lg3);
+        text-decoration: none;
+        transform: skew(10deg);
+      }
+    }
+  }
+
   .village-picture,
   .race-partners {
     margin-bottom: var(--s-lg1);
@@ -74,15 +109,15 @@ main.home {
   }
 
   .race-partners {
-    .partners-carousel { 
+    .partners-carousel {
       display: flex;
       flex: 0 0 100%;
       height: 10rem;
-      margin-left: calc(var(--s-lg1)*-1);
+      margin-left: calc(var(--s-lg1) * -1);
       overflow: hidden;
       position: relative;
       width: 100vw;
-  
+
       &:active .slides-track,
       &:focus .slides-track,
       &:hover .slides-track {
@@ -95,7 +130,7 @@ main.home {
         padding-right: var(--s);
         will-change: transform;
         animation: carousel-horizontal-scroll 20s linear infinite;
-  
+
         .item {
           align-items: center;
           background-color: var(--c-bg-a80);
@@ -104,7 +139,7 @@ main.home {
           padding: var(--s-sl2) var(--s);
           justify-content: center;
           width: 20rem;
-  
+
           img {
             height: 100%;
             max-width: 100%;

@@ -1,5 +1,5 @@
 global['url'] = 'les-foulees-sarmates.com'; // Ensure no slash at the end
-global['version'] = '1.0.0';
+global['version'] = '1.0.1';
 global['port'] = 8080;
 
 console.log(`${(new Date()).toISOString()} | ${global['url']} v${global['version']} | Starting frontend web server`);

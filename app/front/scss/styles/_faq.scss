@@ -16,6 +16,7 @@ main.faq {
       position: relative;
       margin: 0;
       text-align: left;
+      text-indent: 0;
       width: 100%;
       transition: all var(--t-duration);
 
@@ -23,9 +24,10 @@ main.faq {
         content: '\002B';
         font-size: var(--f);
         color: var(--c-fg);
+        line-height: var(--f);
         right: var(--s-lg1);
         position: absolute;
-        transform: translateX(100%);
+        transform: translateX(50%);
       }
 
       &.active {
