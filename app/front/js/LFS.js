@@ -6,7 +6,7 @@ class LFS {
 
 
   constructor() {
-    this._version = '1.0.2';
+    this._version = '1.0.3';
 
     this._updateNav();
     this._handleCountDown();
