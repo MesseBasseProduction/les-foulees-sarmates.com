@@ -129,7 +129,7 @@ main.home {
         gap: var(--s);
         padding-right: var(--s);
         will-change: transform;
-        animation: carousel-horizontal-scroll 24s linear infinite;
+        animation: carousel-horizontal-scroll 30s linear infinite;
 
         .item {
           align-items: center;
