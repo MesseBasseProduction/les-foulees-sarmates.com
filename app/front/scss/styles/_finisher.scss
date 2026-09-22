@@ -1,0 +1,137 @@
+.poster-render-zone {
+  --height: 4963px;
+  --width: 3509px;
+
+  background: white;
+  height: var(--height);
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: var(--width);
+  z-index: 3;
+
+  .map-head {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: var(--width);
+    z-index: 1;
+
+    h1 {
+      font-family: 'Fontjek', 'Gravity', sans-serif;
+      font-size: 28rem;
+      margin-top: 32rem;
+    }
+
+    h2 {
+      font-family: 'Catamaran', 'Gravity', sans-serif;
+      font-size: 6rem;
+    }
+  }
+
+  .map-body {
+    height: var(--height);
+    padding: 20rem;
+    width: var(--width);
+
+    img {
+      height: calc(var(--height) - 40rem);
+      left: 0;
+      margin-left: 20rem;
+      position: absolute;
+      width: calc(var(--width) - 40rem);
+  
+      &:first-of-type {
+        border: solid 3px var(--c-primary-a20);
+        z-index: 1;
+      }
+    }
+  }
+
+  .map-foot {
+    background: white;    
+    bottom: 0;
+    border-top: solid 3px var(--c-primary-a20);
+    display: flex;
+    margin: 0 20rem;
+    padding: 20rem 0;
+    padding-top: 0;
+    position: absolute;
+    width: calc(var(--width) - 40rem);
+    z-index: 1;
+
+    h3 {
+      font-family: 'Fontjek', 'Gravity', sans-serif;
+      font-size: 18rem;
+      margin-top: 16rem;
+      margin-bottom: 10rem; /* Ensuring the gradient goes down a bit */
+
+      &.race-date {
+        font-family: 'Catamaran', 'Gravity', sans-serif;
+        font-size: 8rem;
+        font-style: italic;
+        position: absolute;
+        right: -10rem;
+        top: -35rem;
+        width: 50%;
+      }
+    }
+
+    h4 {
+      font-size: 7rem;
+      margin-top: 20rem;
+    }
+
+    .mbp-logo {
+      opacity: .7;
+      position: absolute;
+      right: 5rem;
+      top: -25rem;      
+      width: 20rem;
+    }
+
+    .left-end {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 60%;      
+
+      img {
+        opacity: .9;
+        width: 90%;
+      }
+    }
+
+    .right-end {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 40%;
+
+      .stats-wrapper {
+        display: flex;
+        justify-content: space-around;
+
+        .metric {
+          text-align: left;
+
+          &:first-of-type {
+            margin-bottom: 7rem;
+          }
+
+          p:first-of-type {
+            font-size: 5rem;
+            font-style: italic;
+            text-transform: uppercase;
+          }
+
+          p:last-of-type {
+            font-size: 6rem;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

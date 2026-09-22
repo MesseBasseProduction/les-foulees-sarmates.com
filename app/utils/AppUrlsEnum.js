@@ -95,5 +95,16 @@ module.exports = Object.freeze([
       '/mentions-legales',
       '/mention-legale'
     ]
-  }
+  }, {
+    mainUrl: '/finishers',
+    rootUrls: [
+      '/finishers'
+    ],
+    redirectionTarget: 'finisher',
+    redirectUrls: [
+      '/finisher',
+      '/posters',
+      '/poster'
+    ]
+  }, 
 ]);

@@ -1,6 +1,7 @@
 @use 'utils/variables';
 @use 'utils/keyframes';
 @use 'utils/base';
+@use 'utils/overlays';
 
 @use 'styles/common';
 @use 'styles/home';
@@ -10,6 +11,7 @@
 @use 'styles/faq';
 @use 'styles/volunteer';
 @use 'styles/about';
+@use 'styles/finisher';
 @use 'styles/notfound';
 
 @use 'utils/responsive';
