@@ -1,3 +1,16 @@
+main.finisher {
+  h4 {
+    font-family: 'Fontjek', 'Gravity', sans-serif;
+    font-size: var(--f-lg3);
+    margin-bottom: var(--s-lg1);
+  }
+
+  .socials {
+    margin-bottom: 0;
+    margin-top: var(--s-lg1);
+  }
+}
+
 .poster-render-zone {
   --height: 4963px;
   --width: 3509px;
@@ -135,3 +148,4 @@
     }
   }
 }
+

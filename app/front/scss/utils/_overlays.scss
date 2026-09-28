@@ -9,7 +9,7 @@
   position: fixed;
   top: 0;
   width: 100vw;
-  z-index: 1;
+  z-index: 3;
   transition: opacity .3s;
 
   &.building-overlay {
@@ -30,35 +30,60 @@
     header {
       border-bottom: solid 1px var(--c-fg-a10);
       padding: var(--s);
+
+      h1 {
+        font-family: 'Fontjek', 'Gravity', sans-serif;
+        font-size: var(--f-lg3);
+      }
     }
 
     main {
       background: inherit;
+      flex-direction: column;
       width: inherit;
 
-      padding: var(--s) var(--s-bg);
+      padding: var(--s-lg1) var(--s-lg2);
 
       p {
         margin-bottom: var(--s);
+      }
+
+      .input-container {
+        align-items: center;
+        display: flex;
+        gap: var(--s-sl3);
+        justify-content: center;
+        margin-bottom: var(--s);
+
+        label {
+          font-style: italic;
+          font-weight: bold;
+        }
 
         &:last-of-type {
           margin-bottom: 0;
         }
       }
+
     }
 
     footer {
       background: inherit;
-      display: inherit;
+      display: flex;
       filter: inherit;
+      flex-direction: row;
       height: inherit;
       width: inherit;
 
       border-top: solid 1px var(--c-fg-a10);
       padding: var(--s);
 
-      button {
+      a {
         cursor: pointer;
+        display: inherit;
+        font-family: inherit;
+        margin: 0;
+        width: inherit;
       }
     }
   }

@@ -1,5 +1,6 @@
 import '../scss/lfs.scss';
 import Countdown from './utils/Countdown';
+const { jsPDF } = window.jspdf;
 
 
 class LFS {
@@ -235,8 +236,8 @@ class LFS {
         csvData.push(obj);
       }
     } catch (error) {
-      // TODO notify UI that no number match the input
-      console.error(error);
+      document.querySelector('#error-message').innerHTML = 'Erreur lors de la lecture du fichier de participants. Veuillez contacter l\'administrateur du site :  contact@messe-basse-production.com';
+      console.error(error)
       return;
     }
     // Now fetch modal
@@ -250,7 +251,7 @@ class LFS {
       // Poster generation specific
       modal.querySelector('#generate-poster').addEventListener('click', () => {
         // First we need to validate submitted input with race csv dump
-        let runner = {};
+        let runner = null;
         for (let i = 0; i < csvData.length; ++i) {
           if (csvData[i].Dossard === modal.querySelector('#race-number').value) {
             runner = csvData[i];
@@ -258,10 +259,9 @@ class LFS {
           }
         }
         if (!runner) {
-          // TODO notify UI that no number match the input
+          modal.querySelector('#error-message').innerHTML = 'Aucun dossard correspondant dans la liste des participants.';
           return;
         }
-        console.log(csvData, runner);
         // Then, we extract runner data to update the map if matching
         const race = runner.Course.replace('km', '');
         const time = runner.Temps.split(':');
@@ -327,10 +327,30 @@ class LFS {
           height: dom.offsetHeight,
           dpi: 300
         }).then(canvas => {
-          const link = document.createElement('A');
-          link.download = `LFS2026-Poster-Finisher.png`;
-          link.href = canvas.toDataURL(`image/png`, 1.0);
-          link.click();
+          if (document.querySelector('#cmyk-output').checked === true) {
+            let pdf = new jsPDF({
+              orientation: 'portrait',
+              format: 'A3',
+              precision: 32
+            });
+            const width = pdf.internal.pageSize.getWidth();
+            const height = pdf.internal.pageSize.getHeight();
+            pdf.addImage(canvas.toDataURL('image/png', 1.0), 'PNG', 0, 0, width, height,'', 'FAST');
+            pdf.setProperties({
+              title: 'Poster Finsher LFS2026',
+              subject: 'Poster de finisher des Foulées Sarmates 2026',
+              author: 'Messe Basse Production',
+              keywords: 'LFS, Les Foulées Sarmates, MBP, Messe Basse Production, 2026, Finisher, Poster',
+              creator: 'Messe Basse Production'
+            });
+            pdf.save(`LFS2026-Poster-Finisher.pdf`);
+          } else {
+            const link = document.createElement('A');
+            link.download = `LFS2026-Poster-Finisher.png`;
+            link.href = canvas.toDataURL(`image/png`, 1.0);
+            link.click();
+          }
+
           resolve();
         }).catch(reject);
       });

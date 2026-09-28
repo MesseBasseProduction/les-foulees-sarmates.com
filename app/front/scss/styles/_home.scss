@@ -84,19 +84,6 @@ main.home {
   }
 
   .race-more-info {
-    .socials {
-      display: flex;
-      gap: var(--s);
-      justify-content: center;
-      margin-bottom: var(--f);
-
-      img {
-        border-radius: var(--f);
-        height: 100%;
-        max-height: var(--s-lg3);
-      }
-    }
-
     .button-container {
       display: flex;
       gap: var(--s);

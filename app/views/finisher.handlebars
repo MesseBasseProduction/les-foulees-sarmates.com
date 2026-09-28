@@ -1,17 +1,34 @@
 {{> nav}}
 <main id="scene" class="finisher" data-nav="finisher">
   <div class="view-wrapper">
-    <h1>Finishers Les Foulées Sarmates 2026</h1>
+    <h1>Finisher!</h1>
     <h2>17 Octobre 2026</h2>
     <h3><i>Sermaise – 91530</i></h3>
     <div class="card">
+      <h4>Les Foulées Sarmates 2026</h4>
       <p>Coureuses, coureurs, félicitations à vous pour vous être élancé·e·s sur le parcours des Foulées Sarmates 2026! C'est avant tout votre participation qui a permis à cet évènement de vivre et nous vous sommes grandement reconnaissant. Nous espérons que vous avez apprécié le parcours et le village sportif.</p>
       <p>Afin d'immortaliser votre performance, nous vous proposons ici de générer une carte unique, au format poster que vous pourrez imprimer/encadrer! Pour cela, rien de plus simple. Entrez votre numéro de dossard ci-dessous, et laisser la magie opérer.</p>
-      <button id="submit-poster">Créer mon poster</button>
-      <p>Aussi, vous pourrez retrouver gratuitement toutes les photos des courses en vous rendant au lien suivant :</p>
-      <a href="https://drive.beaulieu.cloud/s/NPAzrFpoe2LMiqb">Lien vers le drive</a>
-      <p>Enfin, nous sommes curieux d'avoir vos retours! Pour cela, on vous à préparer un petit formulaire. Ainsi, si vous le souhaitez, vous pourrez nous laisser vos commentaires sur les courses, ce qui vous à plu et moins plu, bref, votre opinion la plus pure ! Merci d'avance !</p>
-      <a href="https://drive.beaulieu.cloud/apps/forms/s/XcSreifx4df4BeLaMCop9xHp">Lien vers le formulaire</a>
+      <p id="error-message" class="error-message"></p>
+      <a id="submit-poster" class="button primary" alt="Lien interne pour configurer le poster de finisher selon le numéro de dossard">Créer mon poster</a>
+      <p>Aussi, vous pourrez retrouver gratuitement toutes les photographies des courses en vous rendant au lien suivant. L'organisation vous donne plein droit pour partager ses photos en ligne, à condition de créditer <b>Messe Basse Production</b>.</p>
+      <a href="https://drive.beaulieu.cloud/s/NPAzrFpoe2LMiqb" class="button primary" target="_blank" rel="noopener noreferrer" alt="Lien vers le drive pour récupérer les photos de la course">Lien vers le drive</a>
+      <p>Enfin, nous sommes curieux d'avoir vos retours! Pour cela, on vous à préparer un petit formulaire. Ainsi, si vous le souhaitez, vous pourrez nous laisser vos commentaires sur les courses, ce qui vous à plu et moins plu, bref, votre opinion la plus pure : <b>merci d'avance</b> !</p>
+      <a href="https://drive.beaulieu.cloud/apps/forms/s/XcSreifx4df4BeLaMCop9xHp" class="button primary" target="_blank" rel="noopener noreferrer" alt="Lien vers le formulaire pour laisser des commentaires sur la course">Lien vers le formulaire</a>
+      <p>Nous vous re-donnons toutes nos félicitations pour avoir été les pionnières et pionniers de cette édition des <b>Foulées Sarmates 2026</b>. Suivez-nous sur les réseaux pour ne rien manquer de nos actualités. À très bientôt...</p>
+      <div class="socials">
+        <a href="https://strava.com/clubs/les-foulees-sarmates" target="_blank" rel="noopener noreferrer" alt="Lien vers le club Strava de Messe Basse Production">
+          <img src="/assets/img/logo/strava-logo.webp" alt="Logo de Strava">
+        </a>
+        <a href="https://www.instagram.com/les_foulees_sarmates/" target="_blank" rel="noopener noreferrer" alt="Lien vers le profil Instagram des Foulées Sarmates">
+          <img src="/assets/img/logo/instagram-logo.webp" alt="Logo de Instagram">
+        </a>
+        <a href="https://www.facebook.com/events/2073721416537119" target="_blank" rel="noopener noreferrer" alt="Lien vers l'événement Facebook des Foulées Sarmates">
+          <img src="/assets/img/logo/facebook-logo.webp" alt="Logo de Facebook">
+        </a>
+        <a href="https://messe-basse-production.com" target="_blank" rel="noopener noreferrer" alt="Lien vers le site internet de Messe Basse Production">
+          <img src="/assets/img/logo/mbp-logo.webp" alt="Logo de Messe Basse Production">
+        </a>
+      </div>
     </div>
     {{> countdown}}
   </div>
@@ -19,4 +36,6 @@
 {{> footer}}
 <!-- html2canvas script to allow map exporting -->
 <script type="text/javascript" src="/assets/lib/html2canvas.min.js"></script>
+<!-- jsPDF script to create 'ready to print' images -->
+<script type="text/javascript" src="/assets/lib/jspdf.min.js"></script>
 <script type="text/javascript" src="/assets/dist/LFS.bundle.js"></script>
