@@ -1,13 +1,12 @@
 import '../scss/lfs.scss';
 import Countdown from './utils/Countdown';
-const { jsPDF } = window.jspdf;
 
 
 class LFS {
 
 
   constructor() {
-    this._version = '1.0.4';
+    this._version = '1.1.0';
 
     this._updateNav();
     this._handleCountDown();
@@ -328,6 +327,7 @@ class LFS {
           dpi: 300
         }).then(canvas => {
           if (document.querySelector('#cmyk-output').checked === true) {
+            const { jsPDF } = window.jspdf;
             let pdf = new jsPDF({
               orientation: 'portrait',
               format: 'A3',
@@ -335,7 +335,7 @@ class LFS {
             });
             const width = pdf.internal.pageSize.getWidth();
             const height = pdf.internal.pageSize.getHeight();
-            pdf.addImage(canvas.toDataURL('image/png', 1.0), 'PNG', 0, 0, width, height,'', 'FAST');
+            pdf.addImage(canvas.toDataURL('image/png', 1.0), 'PNG', 0, 0, width, height, '', 'FAST');
             pdf.setProperties({
               title: 'Poster Finsher LFS2026',
               subject: 'Poster de finisher des Foulées Sarmates 2026',

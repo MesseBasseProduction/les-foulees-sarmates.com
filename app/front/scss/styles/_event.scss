@@ -15,7 +15,7 @@ main.event {
         border-radius: .5rem;
         display: grid;
         font-size: var(--f);
-        grid-template-columns: 8rem 3fr;
+        grid-template-columns: 10rem 3fr;
         grid-gap: var(--s);
         margin-bottom: var(--s-sl4);
         padding: var(--s-sl2) var(--s-lg2);
@@ -33,6 +33,19 @@ main.event {
 
     a.button.primary {
       margin-top: var(--s-lg1);
+    }
+
+    h2 {
+      font-family: 'Fontjek', 'Gravity', sans-serif;
+      font-size: var(--f-lg3);
+      margin-bottom: var(--s-lg1);
+      text-align: center;
+    }
+
+    .map {
+      border-radius: var(--f);
+      margin: var(--s) 0;
+      width: 100%;
     }
 
     .catering-partners {
