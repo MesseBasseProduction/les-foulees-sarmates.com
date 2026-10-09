@@ -153,6 +153,22 @@ a.button {
     border: solid 1px var(--c-bg);
     color: var(--c-bg);
   }
+
+  &.closed {
+    background-color: var(--c-primary-a20);
+    cursor: default;
+    pointer-events: none;
+    position: relative;
+
+    &::after {
+      color: var(--c-fg);
+      content: 'Complet!';
+      font-family: 'Fontjek', 'Gravity', sans-serif;
+      opacity: 1;
+      position: absolute;
+      transform: rotate(-10deg);
+    }
+  }
 }
 
 .card {
