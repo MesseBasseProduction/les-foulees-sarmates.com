@@ -218,7 +218,7 @@ class LFS {
     let rawData = {};
     const csvData = [];
     try {
-      const csvResponse = await fetch('/assets/csv/sample.csv');
+      const csvResponse = await fetch('/assets/csv/lfs26-results.csv');
       rawData = await csvResponse.text();
       const lines = rawData.split('\n');
       const headers = lines[0].split(',');
