@@ -215,6 +215,12 @@ main {
       padding: var(--s) var(--s-lg1);
     }
   }
+
+  .race-countdown {
+    p {
+      margin-bottom: 0;
+    }
+  }
 }
 
 footer {

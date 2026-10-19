@@ -283,7 +283,7 @@ class LFS {
             renderZone.querySelector('#runner-name').innerHTML = `${String(runner.Nom[0]).toUpperCase()}${String(runner.Nom).slice(1).toLowerCase()}`;
             renderZone.querySelector('#race-distance').innerHTML = (race === '21') ? '21,02 km' : (race === '10') ? '10,07 km' : '5,69 km';
             renderZone.querySelector('#race-elevation').innerHTML = (race === '21') ? '260 m' : (race === '10') ? '113 m' : '91 m';
-            renderZone.querySelector('#race-time').innerHTML = `${(time[0] !== '00') ? time[0] + 'h' : ''}${time[1]}'${time[2].split('.')[0]}"`;
+            renderZone.querySelector('#race-time').innerHTML = `${(time[0] !== '00' || time[0] !== '0') ? time[0] + 'h' : ''}${time[1]}'${time[2].split('.')[0]}"`;
             renderZone.querySelector('#race-pace').innerHTML = `${pace[0]}${pace[1] ? ',' + pace[1] : ''} min/km`;
 
             this._saveMapToDisk(renderZone).then(() => {

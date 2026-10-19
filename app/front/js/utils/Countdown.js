@@ -10,7 +10,7 @@ class Countdown {
       this._prepareDom(options);
       this.startClock();
     } else {
-      this._targetDom.innerHTML = `<p>Compte à rebourd terminé!<br>À l'année prochaine 😉</p>`;
+      this._targetDom.innerHTML = `<p>Compte à rebourd terminé!<br>À très bientôt 😉</p>`;
     }
   }
 
@@ -102,7 +102,7 @@ class Countdown {
     // Check for stop condition
     if (this._checkValidity() === false) {
       this.stopClock();
-      this._targetDom.innerHTML = `<p>Compte à rebourd terminé!<br>À l'année prochaine 😉</p>`;
+      this._targetDom.innerHTML = `<p>Compte à rebourd terminé!<br>À très bientôt 😉</p>`;
     }
   }
 
