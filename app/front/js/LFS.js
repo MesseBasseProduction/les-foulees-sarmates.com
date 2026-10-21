@@ -264,7 +264,7 @@ class LFS {
         // Then, we extract runner data to update the map if matching
         const race = runner.Course.replace('km', '');
         const time = runner.Temps.split(':');
-        const pace = `${this._precisionRound(60 / runner.Vitesse, 2)}`.split('.');
+        const pace = this._speedToPace(runner.Vitesse);
         document.getElementById('building-overlay').style.display = 'flex';
         setTimeout(() => document.getElementById('building-overlay').style.opacity = 1, 100);
         setTimeout(() => {
@@ -284,7 +284,7 @@ class LFS {
             renderZone.querySelector('#race-distance').innerHTML = (race === '21') ? '21,02 km' : (race === '10') ? '10,07 km' : '5,69 km';
             renderZone.querySelector('#race-elevation').innerHTML = (race === '21') ? '260 m' : (race === '10') ? '113 m' : '91 m';
             renderZone.querySelector('#race-time').innerHTML = `${(time[0] !== '0') ? time[0] + 'h' : ''}${time[1]}'${time[2].split('.')[0]}"`;
-            renderZone.querySelector('#race-pace').innerHTML = `${pace[0]}${pace[1] ? ',' + pace[1] : ''} min/km`;
+            renderZone.querySelector('#race-pace').innerHTML = `${pace} min/km`;
 
             this._saveMapToDisk(renderZone).then(() => {
               document.body.removeChild(renderZone);
@@ -367,6 +367,27 @@ class LFS {
     }
     const multiplier = Math.pow(10, precision || 0);
     return Math.round(value * multiplier) / multiplier;
+  }
+
+
+  _precisionFloor(value, precision) {
+    if (typeof value !== 'number' || typeof precision !== 'number') {
+      return -1;
+    }
+    const multiplier = Math.pow(10, precision || 0);
+    return Math.floor(value * multiplier) / multiplier;
+  }
+
+
+  _speedToPace(speed) {
+    if (speed <= 0) {
+      return '0:00';
+    }
+    
+    const totalMinutes = 60 / speed;
+    const m = Math.floor(totalMinutes);
+    const s = Math.round((totalMinutes - m) * 60);
+    return `${m}:${s < 10 ? `0${s}` : s}`;
   }
 
 
