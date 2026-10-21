@@ -295,7 +295,26 @@ class LFS {
                   document.getElementById('building-overlay').innerHTML = '';
                 }, 300);
               }, 300);
-            }).catch(err => console.error(err));
+            }).catch(err => {
+              console.error(err);
+              modal.querySelector('#error-message').innerHTML = 'Un erreur est survenue lors de la sauvegarde du poster. Contactez le support : contact@messe-basse-production.com';
+              setTimeout(() => {
+                document.getElementById('building-overlay').style.opacity = 0;
+                setTimeout(() => {
+                  document.getElementById('building-overlay').style.display = 'none';
+                  document.getElementById('building-overlay').innerHTML = '';
+                }, 300);
+              }, 300);
+            });
+          }).catch(() => {
+            modal.querySelector('#error-message').innerHTML = 'Un erreur est survenue lors du chargement du modèle. Contactez le support : contact@messe-basse-production.com';
+            setTimeout(() => {
+              document.getElementById('building-overlay').style.opacity = 0;
+              setTimeout(() => {
+                document.getElementById('building-overlay').style.display = 'none';
+                document.getElementById('building-overlay').innerHTML = '';
+              }, 300);
+            }, 300);
           });
         }, 300);
       });
